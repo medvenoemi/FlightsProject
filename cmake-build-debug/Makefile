@@ -128,6 +128,78 @@ FlightsProject/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\FlightsProject.dir\build.make CMakeFiles/FlightsProject.dir/build
 .PHONY : FlightsProject/fast
 
+flights_project/src/calendar/calendar.obj: flights_project/src/calendar/calendar.c.obj
+.PHONY : flights_project/src/calendar/calendar.obj
+
+# target to build an object file
+flights_project/src/calendar/calendar.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FlightsProject.dir\build.make CMakeFiles/FlightsProject.dir/flights_project/src/calendar/calendar.c.obj
+.PHONY : flights_project/src/calendar/calendar.c.obj
+
+flights_project/src/calendar/calendar.i: flights_project/src/calendar/calendar.c.i
+.PHONY : flights_project/src/calendar/calendar.i
+
+# target to preprocess a source file
+flights_project/src/calendar/calendar.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FlightsProject.dir\build.make CMakeFiles/FlightsProject.dir/flights_project/src/calendar/calendar.c.i
+.PHONY : flights_project/src/calendar/calendar.c.i
+
+flights_project/src/calendar/calendar.s: flights_project/src/calendar/calendar.c.s
+.PHONY : flights_project/src/calendar/calendar.s
+
+# target to generate assembly for a file
+flights_project/src/calendar/calendar.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FlightsProject.dir\build.make CMakeFiles/FlightsProject.dir/flights_project/src/calendar/calendar.c.s
+.PHONY : flights_project/src/calendar/calendar.c.s
+
+flights_project/src/country/city.obj: flights_project/src/country/city.c.obj
+.PHONY : flights_project/src/country/city.obj
+
+# target to build an object file
+flights_project/src/country/city.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FlightsProject.dir\build.make CMakeFiles/FlightsProject.dir/flights_project/src/country/city.c.obj
+.PHONY : flights_project/src/country/city.c.obj
+
+flights_project/src/country/city.i: flights_project/src/country/city.c.i
+.PHONY : flights_project/src/country/city.i
+
+# target to preprocess a source file
+flights_project/src/country/city.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FlightsProject.dir\build.make CMakeFiles/FlightsProject.dir/flights_project/src/country/city.c.i
+.PHONY : flights_project/src/country/city.c.i
+
+flights_project/src/country/city.s: flights_project/src/country/city.c.s
+.PHONY : flights_project/src/country/city.s
+
+# target to generate assembly for a file
+flights_project/src/country/city.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FlightsProject.dir\build.make CMakeFiles/FlightsProject.dir/flights_project/src/country/city.c.s
+.PHONY : flights_project/src/country/city.c.s
+
+flights_project/src/country/country_array.obj: flights_project/src/country/country_array.c.obj
+.PHONY : flights_project/src/country/country_array.obj
+
+# target to build an object file
+flights_project/src/country/country_array.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FlightsProject.dir\build.make CMakeFiles/FlightsProject.dir/flights_project/src/country/country_array.c.obj
+.PHONY : flights_project/src/country/country_array.c.obj
+
+flights_project/src/country/country_array.i: flights_project/src/country/country_array.c.i
+.PHONY : flights_project/src/country/country_array.i
+
+# target to preprocess a source file
+flights_project/src/country/country_array.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FlightsProject.dir\build.make CMakeFiles/FlightsProject.dir/flights_project/src/country/country_array.c.i
+.PHONY : flights_project/src/country/country_array.c.i
+
+flights_project/src/country/country_array.s: flights_project/src/country/country_array.c.s
+.PHONY : flights_project/src/country/country_array.s
+
+# target to generate assembly for a file
+flights_project/src/country/country_array.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FlightsProject.dir\build.make CMakeFiles/FlightsProject.dir/flights_project/src/country/country_array.c.s
+.PHONY : flights_project/src/country/country_array.c.s
+
 main.obj: main.c.obj
 .PHONY : main.obj
 
@@ -161,6 +233,15 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... FlightsProject
+	@echo ... flights_project/src/calendar/calendar.obj
+	@echo ... flights_project/src/calendar/calendar.i
+	@echo ... flights_project/src/calendar/calendar.s
+	@echo ... flights_project/src/country/city.obj
+	@echo ... flights_project/src/country/city.i
+	@echo ... flights_project/src/country/city.s
+	@echo ... flights_project/src/country/country_array.obj
+	@echo ... flights_project/src/country/country_array.i
+	@echo ... flights_project/src/country/country_array.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

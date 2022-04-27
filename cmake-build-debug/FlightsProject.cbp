@@ -34,6 +34,9 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="C:/Users/Noemi/CLionProjects/FlightsProject/flights_project/headers/country"/>
+					<Add directory="C:/Users/Noemi/CLionProjects/FlightsProject/flights_project/headers/calendar"/>
+					<Add directory="C:/Users/Noemi/CLionProjects/FlightsProject/shared/headers"/>
 					<Add directory="C:/Program Files/CodeBlocks/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
 					<Add directory="C:/Program Files/CodeBlocks/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
 					<Add directory="C:/Program Files/CodeBlocks/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
@@ -52,6 +55,9 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="C:/Users/Noemi/CLionProjects/FlightsProject/flights_project/headers/country"/>
+					<Add directory="C:/Users/Noemi/CLionProjects/FlightsProject/flights_project/headers/calendar"/>
+					<Add directory="C:/Users/Noemi/CLionProjects/FlightsProject/shared/headers"/>
 					<Add directory="C:/Program Files/CodeBlocks/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
 					<Add directory="C:/Program Files/CodeBlocks/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
 					<Add directory="C:/Program Files/CodeBlocks/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
@@ -74,6 +80,30 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/Noemi/CLionProjects/FlightsProject/flights_project/headers/calendar/calendar.h">
+			<Option target="FlightsProject"/>
+		</Unit>
+		<Unit filename="C:/Users/Noemi/CLionProjects/FlightsProject/flights_project/headers/country">
+			<Option target="FlightsProject"/>
+		</Unit>
+		<Unit filename="C:/Users/Noemi/CLionProjects/FlightsProject/flights_project/headers/country/city.h">
+			<Option target="FlightsProject"/>
+		</Unit>
+		<Unit filename="C:/Users/Noemi/CLionProjects/FlightsProject/flights_project/headers/country/country_array.h">
+			<Option target="FlightsProject"/>
+		</Unit>
+		<Unit filename="C:/Users/Noemi/CLionProjects/FlightsProject/flights_project/src/calendar/calendar.c">
+			<Option target="FlightsProject"/>
+		</Unit>
+		<Unit filename="C:/Users/Noemi/CLionProjects/FlightsProject/flights_project/src/country">
+			<Option target="FlightsProject"/>
+		</Unit>
+		<Unit filename="C:/Users/Noemi/CLionProjects/FlightsProject/flights_project/src/country/city.c">
+			<Option target="FlightsProject"/>
+		</Unit>
+		<Unit filename="C:/Users/Noemi/CLionProjects/FlightsProject/flights_project/src/country/country_array.c">
+			<Option target="FlightsProject"/>
+		</Unit>
 		<Unit filename="C:/Users/Noemi/CLionProjects/FlightsProject/main.c">
 			<Option target="FlightsProject"/>
 		</Unit>

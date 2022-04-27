@@ -66,6 +66,7 @@ include CMakeFiles/FlightsProject.dir/progress.make
 include CMakeFiles/FlightsProject.dir/flags.make
 
 CMakeFiles/FlightsProject.dir/main.c.obj: CMakeFiles/FlightsProject.dir/flags.make
+CMakeFiles/FlightsProject.dir/main.c.obj: CMakeFiles/FlightsProject.dir/includes_C.rsp
 CMakeFiles/FlightsProject.dir/main.c.obj: ../main.c
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Noemi\CLionProjects\FlightsProject\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/FlightsProject.dir/main.c.obj"
 	C:\PROGRA~1\CODEBL~1\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\FlightsProject.dir\main.c.obj -c C:\Users\Noemi\CLionProjects\FlightsProject\main.c
@@ -78,19 +79,67 @@ CMakeFiles/FlightsProject.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/FlightsProject.dir/main.c.s"
 	C:\PROGRA~1\CODEBL~1\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Noemi\CLionProjects\FlightsProject\main.c -o CMakeFiles\FlightsProject.dir\main.c.s
 
+CMakeFiles/FlightsProject.dir/flights_project/src/country/country_array.c.obj: CMakeFiles/FlightsProject.dir/flags.make
+CMakeFiles/FlightsProject.dir/flights_project/src/country/country_array.c.obj: CMakeFiles/FlightsProject.dir/includes_C.rsp
+CMakeFiles/FlightsProject.dir/flights_project/src/country/country_array.c.obj: ../flights_project/src/country/country_array.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Noemi\CLionProjects\FlightsProject\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/FlightsProject.dir/flights_project/src/country/country_array.c.obj"
+	C:\PROGRA~1\CODEBL~1\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\FlightsProject.dir\flights_project\src\country\country_array.c.obj -c C:\Users\Noemi\CLionProjects\FlightsProject\flights_project\src\country\country_array.c
+
+CMakeFiles/FlightsProject.dir/flights_project/src/country/country_array.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/FlightsProject.dir/flights_project/src/country/country_array.c.i"
+	C:\PROGRA~1\CODEBL~1\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Noemi\CLionProjects\FlightsProject\flights_project\src\country\country_array.c > CMakeFiles\FlightsProject.dir\flights_project\src\country\country_array.c.i
+
+CMakeFiles/FlightsProject.dir/flights_project/src/country/country_array.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/FlightsProject.dir/flights_project/src/country/country_array.c.s"
+	C:\PROGRA~1\CODEBL~1\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Noemi\CLionProjects\FlightsProject\flights_project\src\country\country_array.c -o CMakeFiles\FlightsProject.dir\flights_project\src\country\country_array.c.s
+
+CMakeFiles/FlightsProject.dir/flights_project/src/country/city.c.obj: CMakeFiles/FlightsProject.dir/flags.make
+CMakeFiles/FlightsProject.dir/flights_project/src/country/city.c.obj: CMakeFiles/FlightsProject.dir/includes_C.rsp
+CMakeFiles/FlightsProject.dir/flights_project/src/country/city.c.obj: ../flights_project/src/country/city.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Noemi\CLionProjects\FlightsProject\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/FlightsProject.dir/flights_project/src/country/city.c.obj"
+	C:\PROGRA~1\CODEBL~1\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\FlightsProject.dir\flights_project\src\country\city.c.obj -c C:\Users\Noemi\CLionProjects\FlightsProject\flights_project\src\country\city.c
+
+CMakeFiles/FlightsProject.dir/flights_project/src/country/city.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/FlightsProject.dir/flights_project/src/country/city.c.i"
+	C:\PROGRA~1\CODEBL~1\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Noemi\CLionProjects\FlightsProject\flights_project\src\country\city.c > CMakeFiles\FlightsProject.dir\flights_project\src\country\city.c.i
+
+CMakeFiles/FlightsProject.dir/flights_project/src/country/city.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/FlightsProject.dir/flights_project/src/country/city.c.s"
+	C:\PROGRA~1\CODEBL~1\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Noemi\CLionProjects\FlightsProject\flights_project\src\country\city.c -o CMakeFiles\FlightsProject.dir\flights_project\src\country\city.c.s
+
+CMakeFiles/FlightsProject.dir/flights_project/src/calendar/calendar.c.obj: CMakeFiles/FlightsProject.dir/flags.make
+CMakeFiles/FlightsProject.dir/flights_project/src/calendar/calendar.c.obj: CMakeFiles/FlightsProject.dir/includes_C.rsp
+CMakeFiles/FlightsProject.dir/flights_project/src/calendar/calendar.c.obj: ../flights_project/src/calendar/calendar.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Noemi\CLionProjects\FlightsProject\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/FlightsProject.dir/flights_project/src/calendar/calendar.c.obj"
+	C:\PROGRA~1\CODEBL~1\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\FlightsProject.dir\flights_project\src\calendar\calendar.c.obj -c C:\Users\Noemi\CLionProjects\FlightsProject\flights_project\src\calendar\calendar.c
+
+CMakeFiles/FlightsProject.dir/flights_project/src/calendar/calendar.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/FlightsProject.dir/flights_project/src/calendar/calendar.c.i"
+	C:\PROGRA~1\CODEBL~1\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Noemi\CLionProjects\FlightsProject\flights_project\src\calendar\calendar.c > CMakeFiles\FlightsProject.dir\flights_project\src\calendar\calendar.c.i
+
+CMakeFiles/FlightsProject.dir/flights_project/src/calendar/calendar.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/FlightsProject.dir/flights_project/src/calendar/calendar.c.s"
+	C:\PROGRA~1\CODEBL~1\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Noemi\CLionProjects\FlightsProject\flights_project\src\calendar\calendar.c -o CMakeFiles\FlightsProject.dir\flights_project\src\calendar\calendar.c.s
+
 # Object files for target FlightsProject
 FlightsProject_OBJECTS = \
-"CMakeFiles/FlightsProject.dir/main.c.obj"
+"CMakeFiles/FlightsProject.dir/main.c.obj" \
+"CMakeFiles/FlightsProject.dir/flights_project/src/country/country_array.c.obj" \
+"CMakeFiles/FlightsProject.dir/flights_project/src/country/city.c.obj" \
+"CMakeFiles/FlightsProject.dir/flights_project/src/calendar/calendar.c.obj"
 
 # External object files for target FlightsProject
 FlightsProject_EXTERNAL_OBJECTS =
 
 FlightsProject.exe: CMakeFiles/FlightsProject.dir/main.c.obj
+FlightsProject.exe: CMakeFiles/FlightsProject.dir/flights_project/src/country/country_array.c.obj
+FlightsProject.exe: CMakeFiles/FlightsProject.dir/flights_project/src/country/city.c.obj
+FlightsProject.exe: CMakeFiles/FlightsProject.dir/flights_project/src/calendar/calendar.c.obj
 FlightsProject.exe: CMakeFiles/FlightsProject.dir/build.make
 FlightsProject.exe: CMakeFiles/FlightsProject.dir/linklibs.rsp
 FlightsProject.exe: CMakeFiles/FlightsProject.dir/objects1.rsp
 FlightsProject.exe: CMakeFiles/FlightsProject.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Noemi\CLionProjects\FlightsProject\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable FlightsProject.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Noemi\CLionProjects\FlightsProject\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C executable FlightsProject.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\FlightsProject.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
