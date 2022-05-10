@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_C
   "C:/Users/Noemi/CLionProjects/FlightsProject/flights_project/src/calendar/calendar.c" "C:/Users/Noemi/CLionProjects/FlightsProject/cmake-build-debug/CMakeFiles/FlightsProject.dir/flights_project/src/calendar/calendar.c.obj"
   "C:/Users/Noemi/CLionProjects/FlightsProject/flights_project/src/country/city.c" "C:/Users/Noemi/CLionProjects/FlightsProject/cmake-build-debug/CMakeFiles/FlightsProject.dir/flights_project/src/country/city.c.obj"
+  "C:/Users/Noemi/CLionProjects/FlightsProject/flights_project/src/country/country.c" "C:/Users/Noemi/CLionProjects/FlightsProject/cmake-build-debug/CMakeFiles/FlightsProject.dir/flights_project/src/country/country.c.obj"
   "C:/Users/Noemi/CLionProjects/FlightsProject/flights_project/src/country/country_array.c" "C:/Users/Noemi/CLionProjects/FlightsProject/cmake-build-debug/CMakeFiles/FlightsProject.dir/flights_project/src/country/country_array.c.obj"
   "C:/Users/Noemi/CLionProjects/FlightsProject/main.c" "C:/Users/Noemi/CLionProjects/FlightsProject/cmake-build-debug/CMakeFiles/FlightsProject.dir/main.c.obj"
   )

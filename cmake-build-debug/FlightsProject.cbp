@@ -89,6 +89,9 @@
 		<Unit filename="C:/Users/Noemi/CLionProjects/FlightsProject/flights_project/headers/country/city.h">
 			<Option target="FlightsProject"/>
 		</Unit>
+		<Unit filename="C:/Users/Noemi/CLionProjects/FlightsProject/flights_project/headers/country/country.h">
+			<Option target="FlightsProject"/>
+		</Unit>
 		<Unit filename="C:/Users/Noemi/CLionProjects/FlightsProject/flights_project/headers/country/country_array.h">
 			<Option target="FlightsProject"/>
 		</Unit>
@@ -99,6 +102,9 @@
 			<Option target="FlightsProject"/>
 		</Unit>
 		<Unit filename="C:/Users/Noemi/CLionProjects/FlightsProject/flights_project/src/country/city.c">
+			<Option target="FlightsProject"/>
+		</Unit>
+		<Unit filename="C:/Users/Noemi/CLionProjects/FlightsProject/flights_project/src/country/country.c">
 			<Option target="FlightsProject"/>
 		</Unit>
 		<Unit filename="C:/Users/Noemi/CLionProjects/FlightsProject/flights_project/src/country/country_array.c">
