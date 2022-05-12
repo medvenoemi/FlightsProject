@@ -8,10 +8,12 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "C:/Users/Noemi/CLionProjects/FlightsProject/flights_project/src/calendar/calendar.c" "C:/Users/Noemi/CLionProjects/FlightsProject/cmake-build-debug/CMakeFiles/FlightsProject.dir/flights_project/src/calendar/calendar.c.obj"
-  "C:/Users/Noemi/CLionProjects/FlightsProject/flights_project/src/country/city.c" "C:/Users/Noemi/CLionProjects/FlightsProject/cmake-build-debug/CMakeFiles/FlightsProject.dir/flights_project/src/country/city.c.obj"
-  "C:/Users/Noemi/CLionProjects/FlightsProject/flights_project/src/country/country_array.c" "C:/Users/Noemi/CLionProjects/FlightsProject/cmake-build-debug/CMakeFiles/FlightsProject.dir/flights_project/src/country/country_array.c.obj"
-  "C:/Users/Noemi/CLionProjects/FlightsProject/main.c" "C:/Users/Noemi/CLionProjects/FlightsProject/cmake-build-debug/CMakeFiles/FlightsProject.dir/main.c.obj"
+  "C:/EGYETEM/DSA/FlightsProjekt/projekt/flights_project/src/calendar/calendar.c" "C:/EGYETEM/DSA/FlightsProjekt/projekt/cmake-build-debug/CMakeFiles/FlightsProject.dir/flights_project/src/calendar/calendar.c.obj"
+  "C:/EGYETEM/DSA/FlightsProjekt/projekt/flights_project/src/country/city.c" "C:/EGYETEM/DSA/FlightsProjekt/projekt/cmake-build-debug/CMakeFiles/FlightsProject.dir/flights_project/src/country/city.c.obj"
+  "C:/EGYETEM/DSA/FlightsProjekt/projekt/flights_project/src/country/country_array.c" "C:/EGYETEM/DSA/FlightsProjekt/projekt/cmake-build-debug/CMakeFiles/FlightsProject.dir/flights_project/src/country/country_array.c.obj"
+  "C:/EGYETEM/DSA/FlightsProjekt/projekt/flights_project/src/flight/flight.c" "C:/EGYETEM/DSA/FlightsProjekt/projekt/cmake-build-debug/CMakeFiles/FlightsProject.dir/flights_project/src/flight/flight.c.obj"
+  "C:/EGYETEM/DSA/FlightsProjekt/projekt/flights_project/src/passenger/passenger.c" "C:/EGYETEM/DSA/FlightsProjekt/projekt/cmake-build-debug/CMakeFiles/FlightsProject.dir/flights_project/src/passenger/passenger.c.obj"
+  "C:/EGYETEM/DSA/FlightsProjekt/projekt/main.c" "C:/EGYETEM/DSA/FlightsProjekt/projekt/cmake-build-debug/CMakeFiles/FlightsProject.dir/main.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
@@ -19,6 +21,8 @@ set(CMAKE_C_COMPILER_ID "GNU")
 set(CMAKE_C_TARGET_INCLUDE_PATH
   "../flights_project/headers/country"
   "../flights_project/headers/calendar"
+  "../flights_project/headers/passenger"
+  "../flights_project/headers/flight"
   "../shared/headers"
   )
 

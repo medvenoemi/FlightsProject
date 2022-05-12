@@ -2,6 +2,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/FlightsProject.dir/flights_project/src/calendar/calendar.c.obj"
   "CMakeFiles/FlightsProject.dir/flights_project/src/country/city.c.obj"
   "CMakeFiles/FlightsProject.dir/flights_project/src/country/country_array.c.obj"
+  "CMakeFiles/FlightsProject.dir/flights_project/src/flight/flight.c.obj"
+  "CMakeFiles/FlightsProject.dir/flights_project/src/passenger/passenger.c.obj"
   "CMakeFiles/FlightsProject.dir/main.c.obj"
   "FlightsProject.exe"
   "FlightsProject.exe.manifest"
