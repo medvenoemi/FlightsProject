@@ -8,122 +8,122 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="C:/EGYETEM/DSA/FlightsProjekt/projekt/cmake-build-debug"/>
+				<Option working_dir="C:/Users/Noemi/CLionProjects/FlightsProject/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/EGYETEM/DSA/FlightsProjekt/projekt/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/EGYETEM/DSA/FlightsProjekt/projekt/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/EGYETEM/DSA/FlightsProjekt/projekt/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/EGYETEM/DSA/FlightsProjekt/projekt/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Noemi/CLionProjects/FlightsProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/PROGRA~1/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Noemi/CLionProjects/FlightsProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Noemi/CLionProjects/FlightsProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Noemi/CLionProjects/FlightsProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="C:/EGYETEM/DSA/FlightsProjekt/projekt/cmake-build-debug"/>
+				<Option working_dir="C:/Users/Noemi/CLionProjects/FlightsProject/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/EGYETEM/DSA/FlightsProjekt/projekt/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/EGYETEM/DSA/FlightsProjekt/projekt/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/EGYETEM/DSA/FlightsProjekt/projekt/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/EGYETEM/DSA/FlightsProjekt/projekt/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Noemi/CLionProjects/FlightsProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/PROGRA~1/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Noemi/CLionProjects/FlightsProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Noemi/CLionProjects/FlightsProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Noemi/CLionProjects/FlightsProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="FlightsProject">
-				<Option output="C:/EGYETEM/DSA/FlightsProjekt/projekt/cmake-build-debug/FlightsProject.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/EGYETEM/DSA/FlightsProjekt/projekt/cmake-build-debug"/>
+				<Option output="C:/Users/Noemi/CLionProjects/FlightsProject/cmake-build-debug/FlightsProject.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Noemi/CLionProjects/FlightsProject/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:/EGYETEM/DSA/FlightsProjekt/projekt/flights_project/headers/country"/>
-					<Add directory="C:/EGYETEM/DSA/FlightsProjekt/projekt/flights_project/headers/calendar"/>
-					<Add directory="C:/EGYETEM/DSA/FlightsProjekt/projekt/flights_project/headers/passenger"/>
-					<Add directory="C:/EGYETEM/DSA/FlightsProjekt/projekt/flights_project/headers/flight"/>
-					<Add directory="C:/EGYETEM/DSA/FlightsProjekt/projekt/shared/headers"/>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="C:/Users/Noemi/CLionProjects/FlightsProject/flights_project/headers/country"/>
+					<Add directory="C:/Users/Noemi/CLionProjects/FlightsProject/flights_project/headers/calendar"/>
+					<Add directory="C:/Users/Noemi/CLionProjects/FlightsProject/flights_project/headers/passenger"/>
+					<Add directory="C:/Users/Noemi/CLionProjects/FlightsProject/flights_project/headers/flight"/>
+					<Add directory="C:/Users/Noemi/CLionProjects/FlightsProject/shared/headers"/>
+					<Add directory="C:/Program Files/CodeBlocks/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/CodeBlocks/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/CodeBlocks/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/EGYETEM/DSA/FlightsProjekt/projekt/cmake-build-debug/Makefile&quot;  VERBOSE=1 FlightsProject"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/EGYETEM/DSA/FlightsProjekt/projekt/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/EGYETEM/DSA/FlightsProjekt/projekt/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/EGYETEM/DSA/FlightsProjekt/projekt/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Noemi/CLionProjects/FlightsProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 FlightsProject"/>
+					<CompileFile command="C:/PROGRA~1/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Noemi/CLionProjects/FlightsProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Noemi/CLionProjects/FlightsProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Noemi/CLionProjects/FlightsProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="FlightsProject/fast">
-				<Option output="C:/EGYETEM/DSA/FlightsProjekt/projekt/cmake-build-debug/FlightsProject.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/EGYETEM/DSA/FlightsProjekt/projekt/cmake-build-debug"/>
+				<Option output="C:/Users/Noemi/CLionProjects/FlightsProject/cmake-build-debug/FlightsProject.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Noemi/CLionProjects/FlightsProject/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:/EGYETEM/DSA/FlightsProjekt/projekt/flights_project/headers/country"/>
-					<Add directory="C:/EGYETEM/DSA/FlightsProjekt/projekt/flights_project/headers/calendar"/>
-					<Add directory="C:/EGYETEM/DSA/FlightsProjekt/projekt/flights_project/headers/passenger"/>
-					<Add directory="C:/EGYETEM/DSA/FlightsProjekt/projekt/flights_project/headers/flight"/>
-					<Add directory="C:/EGYETEM/DSA/FlightsProjekt/projekt/shared/headers"/>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="C:/Users/Noemi/CLionProjects/FlightsProject/flights_project/headers/country"/>
+					<Add directory="C:/Users/Noemi/CLionProjects/FlightsProject/flights_project/headers/calendar"/>
+					<Add directory="C:/Users/Noemi/CLionProjects/FlightsProject/flights_project/headers/passenger"/>
+					<Add directory="C:/Users/Noemi/CLionProjects/FlightsProject/flights_project/headers/flight"/>
+					<Add directory="C:/Users/Noemi/CLionProjects/FlightsProject/shared/headers"/>
+					<Add directory="C:/Program Files/CodeBlocks/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/CodeBlocks/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/CodeBlocks/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/EGYETEM/DSA/FlightsProjekt/projekt/cmake-build-debug/Makefile&quot;  VERBOSE=1 FlightsProject/fast"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/EGYETEM/DSA/FlightsProjekt/projekt/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/EGYETEM/DSA/FlightsProjekt/projekt/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/EGYETEM/DSA/FlightsProjekt/projekt/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Noemi/CLionProjects/FlightsProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 FlightsProject/fast"/>
+					<CompileFile command="C:/PROGRA~1/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Noemi/CLionProjects/FlightsProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Noemi/CLionProjects/FlightsProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Noemi/CLionProjects/FlightsProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="C:/EGYETEM/DSA/FlightsProjekt/projekt/cmake-build-debug"/>
+				<Option working_dir="C:/Users/Noemi/CLionProjects/FlightsProject/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/EGYETEM/DSA/FlightsProjekt/projekt/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/EGYETEM/DSA/FlightsProjekt/projekt/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/EGYETEM/DSA/FlightsProjekt/projekt/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/EGYETEM/DSA/FlightsProjekt/projekt/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Noemi/CLionProjects/FlightsProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/PROGRA~1/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Noemi/CLionProjects/FlightsProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Noemi/CLionProjects/FlightsProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Noemi/CLionProjects/FlightsProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/EGYETEM/DSA/FlightsProjekt/projekt/flights_project/headers/calendar/calendar.h">
+		<Unit filename="C:/Users/Noemi/CLionProjects/FlightsProject/flights_project/headers/calendar/calendar.h">
 			<Option target="FlightsProject"/>
 		</Unit>
-		<Unit filename="C:/EGYETEM/DSA/FlightsProjekt/projekt/flights_project/headers/country">
+		<Unit filename="C:/Users/Noemi/CLionProjects/FlightsProject/flights_project/headers/country">
 			<Option target="FlightsProject"/>
 		</Unit>
-		<Unit filename="C:/EGYETEM/DSA/FlightsProjekt/projekt/flights_project/headers/country/city.h">
+		<Unit filename="C:/Users/Noemi/CLionProjects/FlightsProject/flights_project/headers/country/city.h">
 			<Option target="FlightsProject"/>
 		</Unit>
-		<Unit filename="C:/EGYETEM/DSA/FlightsProjekt/projekt/flights_project/headers/country/country_array.h">
+		<Unit filename="C:/Users/Noemi/CLionProjects/FlightsProject/flights_project/headers/country/country_array.h">
 			<Option target="FlightsProject"/>
 		</Unit>
-		<Unit filename="C:/EGYETEM/DSA/FlightsProjekt/projekt/flights_project/headers/flight/flight.h">
+		<Unit filename="C:/Users/Noemi/CLionProjects/FlightsProject/flights_project/headers/flight/flight.h">
 			<Option target="FlightsProject"/>
 		</Unit>
-		<Unit filename="C:/EGYETEM/DSA/FlightsProjekt/projekt/flights_project/headers/passenger/passenger.h">
+		<Unit filename="C:/Users/Noemi/CLionProjects/FlightsProject/flights_project/headers/passenger/passenger.h">
 			<Option target="FlightsProject"/>
 		</Unit>
-		<Unit filename="C:/EGYETEM/DSA/FlightsProjekt/projekt/flights_project/src/calendar/calendar.c">
+		<Unit filename="C:/Users/Noemi/CLionProjects/FlightsProject/flights_project/src/calendar/calendar.c">
 			<Option target="FlightsProject"/>
 		</Unit>
-		<Unit filename="C:/EGYETEM/DSA/FlightsProjekt/projekt/flights_project/src/country">
+		<Unit filename="C:/Users/Noemi/CLionProjects/FlightsProject/flights_project/src/country">
 			<Option target="FlightsProject"/>
 		</Unit>
-		<Unit filename="C:/EGYETEM/DSA/FlightsProjekt/projekt/flights_project/src/country/city.c">
+		<Unit filename="C:/Users/Noemi/CLionProjects/FlightsProject/flights_project/src/country/city.c">
 			<Option target="FlightsProject"/>
 		</Unit>
-		<Unit filename="C:/EGYETEM/DSA/FlightsProjekt/projekt/flights_project/src/country/country_array.c">
+		<Unit filename="C:/Users/Noemi/CLionProjects/FlightsProject/flights_project/src/country/country_array.c">
 			<Option target="FlightsProject"/>
 		</Unit>
-		<Unit filename="C:/EGYETEM/DSA/FlightsProjekt/projekt/flights_project/src/flight/flight.c">
+		<Unit filename="C:/Users/Noemi/CLionProjects/FlightsProject/flights_project/src/flight/flight.c">
 			<Option target="FlightsProject"/>
 		</Unit>
-		<Unit filename="C:/EGYETEM/DSA/FlightsProjekt/projekt/flights_project/src/passenger/passenger.c">
+		<Unit filename="C:/Users/Noemi/CLionProjects/FlightsProject/flights_project/src/passenger/passenger.c">
 			<Option target="FlightsProject"/>
 		</Unit>
-		<Unit filename="C:/EGYETEM/DSA/FlightsProjekt/projekt/main.c">
+		<Unit filename="C:/Users/Noemi/CLionProjects/FlightsProject/main.c">
 			<Option target="FlightsProject"/>
 		</Unit>
-		<Unit filename="C:/EGYETEM/DSA/FlightsProjekt/projekt/CMakeLists.txt">
+		<Unit filename="C:/Users/Noemi/CLionProjects/FlightsProject/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

@@ -9,34 +9,29 @@
 
 void createCountryArray(CountryArray** countryArray, int capacity){
     *countryArray = (CountryArray*)malloc(sizeof(countryArray));
-    (*countryArray)->Cities = (City**)malloc(sizeof(City*));
-    (*countryArray)->numberOfCities = 0;
+    (*countryArray)->Countries = (Country **)malloc(sizeof(Country *));
+    (*countryArray)->numberOfCountries = 0;
     (*countryArray)->capacity = capacity;
 }
 
-bool addNewCountry(CountryArray* countryArray, City* newCity){
-    if(countryArray->numberOfCities<countryArray->capacity){
-        createCity(&countryArray->Cities[countryArray->numberOfCities]);
-        setCityData(countryArray->Cities[countryArray->numberOfCities], newCity->name, newCity->distance, newCity->timeDuration);
-        countryArray->numberOfCities++;
-        return true;
-    }
-    else{
-        return false;
+bool addNewCountry(CountryArray* countryArray, Country * newCountry, int position){
+    if(countryArray->capacity<countryArray->numberOfCountries){
+        countryArray->Countries[position]->name = newCountry->name;
+        countryArray->Countries[position]->cities = newCountry->cities;
     }
 }
 
 void deleteCountryArray(CountryArray** countryArray){
-    for(int i=0;i<(*countryArray)->numberOfCities;i++){
-        deleteCity(&(*countryArray)->Cities[i]);
+    for(int i=0;i<(*countryArray)->numberOfCountries;i++){
+        deleteCity(&(*countryArray)->Countries[i]);
     }
-    free((*countryArray)->Cities);
+    free((*countryArray)->Countries);
     free(*countryArray);
 }
 
 void printCountries(CountryArray* countryArray){
-    for(int i=0;i<countryArray->numberOfCities;i++){
-        printCity(countryArray->Cities[i], NULL);
+    for(int i=0;i<countryArray->numberOfCountries;i++){
+        display(countryArray->Countries[i]);
         printf("\n");
     }
 }

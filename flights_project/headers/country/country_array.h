@@ -5,16 +5,16 @@
 #ifndef FLIGHTSPROJECT_COUNTRY_ARRAY_H
 #define FLIGHTSPROJECT_COUNTRY_ARRAY_H
 #include <stdbool.h>
-#include "city.h"
+#include "country.h"
 
 typedef struct{
-    City** Cities;
+    Country** Countries;
     int capacity;
-    int numberOfCities;
+    int numberOfCountries;
 }CountryArray;
 
 void createCountryArray(CountryArray** countryArray, int capacity);
-bool addNewCountry(CountryArray* countryArray, City* newCity);
+bool addNewCountry(CountryArray* countryArray, Country * newCountry, int position);
 void deleteCountryArray(CountryArray** countryArray);
 void printCountries(CountryArray* countryArray);
 
