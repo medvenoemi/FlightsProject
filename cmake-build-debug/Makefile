@@ -176,6 +176,30 @@ flights_project/src/country/city.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\FlightsProject.dir\build.make CMakeFiles/FlightsProject.dir/flights_project/src/country/city.c.s
 .PHONY : flights_project/src/country/city.c.s
 
+flights_project/src/country/country.obj: flights_project/src/country/country.c.obj
+.PHONY : flights_project/src/country/country.obj
+
+# target to build an object file
+flights_project/src/country/country.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FlightsProject.dir\build.make CMakeFiles/FlightsProject.dir/flights_project/src/country/country.c.obj
+.PHONY : flights_project/src/country/country.c.obj
+
+flights_project/src/country/country.i: flights_project/src/country/country.c.i
+.PHONY : flights_project/src/country/country.i
+
+# target to preprocess a source file
+flights_project/src/country/country.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FlightsProject.dir\build.make CMakeFiles/FlightsProject.dir/flights_project/src/country/country.c.i
+.PHONY : flights_project/src/country/country.c.i
+
+flights_project/src/country/country.s: flights_project/src/country/country.c.s
+.PHONY : flights_project/src/country/country.s
+
+# target to generate assembly for a file
+flights_project/src/country/country.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FlightsProject.dir\build.make CMakeFiles/FlightsProject.dir/flights_project/src/country/country.c.s
+.PHONY : flights_project/src/country/country.c.s
+
 flights_project/src/country/country_array.obj: flights_project/src/country/country_array.c.obj
 .PHONY : flights_project/src/country/country_array.obj
 
@@ -287,6 +311,9 @@ help:
 	@echo ... flights_project/src/country/city.obj
 	@echo ... flights_project/src/country/city.i
 	@echo ... flights_project/src/country/city.s
+	@echo ... flights_project/src/country/country.obj
+	@echo ... flights_project/src/country/country.i
+	@echo ... flights_project/src/country/country.s
 	@echo ... flights_project/src/country/country_array.obj
 	@echo ... flights_project/src/country/country_array.i
 	@echo ... flights_project/src/country/country_array.s
