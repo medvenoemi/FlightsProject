@@ -123,6 +123,12 @@
 		<Unit filename="C:/Users/Noemi/CLionProjects/FlightsProject/main.c">
 			<Option target="FlightsProject"/>
 		</Unit>
+		<Unit filename="C:/Users/Noemi/CLionProjects/FlightsProject/shared/headers/errors.h">
+			<Option target="FlightsProject"/>
+		</Unit>
+		<Unit filename="C:/Users/Noemi/CLionProjects/FlightsProject/shared/src/errors.c">
+			<Option target="FlightsProject"/>
+		</Unit>
 		<Unit filename="C:/Users/Noemi/CLionProjects/FlightsProject/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

@@ -9,6 +9,9 @@
 
 void createCity(City ** city){
     *city = (City *) malloc(sizeof (City));
+    if(!(*city)){
+        //printErrorMessages(MEMORY_ALLOCATION);
+    }
 }
 
 void deleteCity(City** city){

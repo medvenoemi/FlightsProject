@@ -272,6 +272,30 @@ main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\FlightsProject.dir\build.make CMakeFiles/FlightsProject.dir/main.c.s
 .PHONY : main.c.s
 
+shared/src/errors.obj: shared/src/errors.c.obj
+.PHONY : shared/src/errors.obj
+
+# target to build an object file
+shared/src/errors.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FlightsProject.dir\build.make CMakeFiles/FlightsProject.dir/shared/src/errors.c.obj
+.PHONY : shared/src/errors.c.obj
+
+shared/src/errors.i: shared/src/errors.c.i
+.PHONY : shared/src/errors.i
+
+# target to preprocess a source file
+shared/src/errors.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FlightsProject.dir\build.make CMakeFiles/FlightsProject.dir/shared/src/errors.c.i
+.PHONY : shared/src/errors.c.i
+
+shared/src/errors.s: shared/src/errors.c.s
+.PHONY : shared/src/errors.s
+
+# target to generate assembly for a file
+shared/src/errors.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FlightsProject.dir\build.make CMakeFiles/FlightsProject.dir/shared/src/errors.c.s
+.PHONY : shared/src/errors.c.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -299,6 +323,9 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... shared/src/errors.obj
+	@echo ... shared/src/errors.i
+	@echo ... shared/src/errors.s
 .PHONY : help
 
 

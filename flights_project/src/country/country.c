@@ -46,6 +46,9 @@ char* getCountry(enum Countries name){
 
 void createCountry(Country** country, unsigned int capacity, enum Countries name){
     *country = (Country*)malloc(sizeof (Country));
+    if(!(*country)){
+        //printErrorMessages(MEMORY_ALLOCATION);
+    }
     (*country)->top = -1;
     (*country)->capacity = capacity;
     (*country)->name = name;

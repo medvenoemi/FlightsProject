@@ -5,6 +5,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/FlightsProject.dir/flights_project/src/flight/flight.c.obj"
   "CMakeFiles/FlightsProject.dir/flights_project/src/passenger/passenger.c.obj"
   "CMakeFiles/FlightsProject.dir/main.c.obj"
+  "CMakeFiles/FlightsProject.dir/shared/src/errors.c.obj"
   "FlightsProject.exe"
   "FlightsProject.exe.manifest"
   "FlightsProject.pdb"

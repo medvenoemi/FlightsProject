@@ -9,7 +9,13 @@
 
 void createCountryArray(CountryArray** countryArray, int capacity){
     *countryArray = (CountryArray*)malloc(sizeof(countryArray));
+    if(!(*countryArray)){
+        //printErrorMessages(MEMORY_ALLOCATION);
+    }
     (*countryArray)->Countries = (Country **)malloc(sizeof(Country *));
+    if(!(*countryArray)->Countries){
+        //printErrorMessages(MEMORY_ALLOCATION);
+    }
     (*countryArray)->numberOfCountries = 0;
     (*countryArray)->capacity = capacity;
 }

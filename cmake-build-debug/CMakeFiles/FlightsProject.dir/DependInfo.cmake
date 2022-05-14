@@ -14,6 +14,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "C:/Users/Noemi/CLionProjects/FlightsProject/flights_project/src/flight/flight.c" "C:/Users/Noemi/CLionProjects/FlightsProject/cmake-build-debug/CMakeFiles/FlightsProject.dir/flights_project/src/flight/flight.c.obj"
   "C:/Users/Noemi/CLionProjects/FlightsProject/flights_project/src/passenger/passenger.c" "C:/Users/Noemi/CLionProjects/FlightsProject/cmake-build-debug/CMakeFiles/FlightsProject.dir/flights_project/src/passenger/passenger.c.obj"
   "C:/Users/Noemi/CLionProjects/FlightsProject/main.c" "C:/Users/Noemi/CLionProjects/FlightsProject/cmake-build-debug/CMakeFiles/FlightsProject.dir/main.c.obj"
+  "C:/Users/Noemi/CLionProjects/FlightsProject/shared/src/errors.c" "C:/Users/Noemi/CLionProjects/FlightsProject/cmake-build-debug/CMakeFiles/FlightsProject.dir/shared/src/errors.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
