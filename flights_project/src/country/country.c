@@ -61,7 +61,8 @@ void createCountry(Country** country, unsigned int capacity, enum Countries name
 void push(Country* country, City* city){
     country->top++;
     strcpy(country->cities[country->top]->name, city->name);
-    country->cities[country->top]->timeDuration = city->timeDuration;
+    country->cities[country->top]->time.hour = city->time.hour;
+    country->cities[country->top]->time.minute = city->time.minute;
     country->cities[country->top]->distance = city->distance;
 }
 

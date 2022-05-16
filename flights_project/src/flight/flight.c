@@ -32,7 +32,7 @@ void setFlightData(Flight* flight, Date date, TakeOff takeOff, Landing landing, 
     flight->takeOff.minute = takeOff.minute;
     flight->landing.hour = landing.hour;
     flight->landing.minute = landing.minute;
-    setCityData(flight->destination, city->name, city->distance, city->timeDuration);
+    setCityData(flight->destination, city->name, city->distance, city->time.hour, city->time.minute);
     flight->price = price;
 }
 
@@ -41,7 +41,7 @@ void insertPassenger(Flight* flight, Passenger* passenger) {
     do{
         j = (passenger->id + i) % flight->capacity;
         if(flight->table[j]->id == -1){
-            setPassengerData(flight->table[j], passenger->name, passenger->nationality, passenger->gender, passenger->birthDate);
+            setPassengerData(flight->table[j], passenger->name.lastName, passenger->name.firstName, passenger->nationality, passenger->gender, passenger->birthDate.year, passenger->birthDate.month, passenger->birthDate.day);
             flight->table[j]->seat = j;
             flight->table[j]->id = passenger->id;
             printf("\nPassenger with the ID %i inserted\n", passenger->id);

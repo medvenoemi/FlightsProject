@@ -29,7 +29,7 @@ bool addNewCountry(CountryArray* countryArray, Country * newCountry, int positio
 
 void deleteCountryArray(CountryArray** countryArray){
     for(int i=0;i<(*countryArray)->numberOfCountries;i++){
-        deleteCity(&(*countryArray)->Countries[i]);
+        freeCountryStack((*countryArray)->Countries[i]);
     }
     free((*countryArray)->Countries);
     free(*countryArray);

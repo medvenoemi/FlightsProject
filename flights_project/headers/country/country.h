@@ -9,7 +9,7 @@
 #include <stdbool.h>
 
 enum Countries{
-    FRANCE,
+    FRANCE=0,
     SPAIN,
     UNITED_STATES,
     CHINA,

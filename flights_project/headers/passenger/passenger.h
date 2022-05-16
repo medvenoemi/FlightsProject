@@ -6,14 +6,20 @@
 #define FLIGHTSPROJECT_PASSENGER_H
 
 #include "city.h"
+#include "errors.h"
 #include "stdlib.h"
 #include <stdio.h>
 #include <string.h>
 
 enum Gender{
-    FEMALE,
+    FEMALE=0,
     MALE
 };
+
+typedef struct{
+    char firstName[20];
+    char lastName [20];
+}Name;
 
 typedef struct{
     int year, month, day;
@@ -26,7 +32,7 @@ enum Side{
 
 typedef struct{
     unsigned int id;
-    char name[20];
+    Name name;
     char nationality[20];
     enum Gender gender;
     BirthDate birthDate;
@@ -35,7 +41,7 @@ typedef struct{
 
 void createPassenger(Passenger** passenger);
 char *getGender(enum Gender type);
-void setPassengerData(Passenger* passenger, char* name, char* nationality, enum Gender gender, BirthDate birthDate);
+void setPassengerData(Passenger* passenger, char* lastName, char* firstName, char* nationality, enum Gender gender, int year, int month, int day);
 void printPassenger(Passenger* passenger);
 void deletePassenger(Passenger** passenger);
 

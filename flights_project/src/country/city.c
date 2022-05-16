@@ -18,19 +18,21 @@ void deleteCity(City** city){
     free(city);
 }
 
-void setCityData(City * newCountry, char* name, int distance, int timeDuration){
-    newCountry -> distance = distance;
-    newCountry ->timeDuration = timeDuration;
-    strcpy(newCountry ->name, name);
+void setCityData(City * newCity, char* name, int distance, int hour, int minute){
+    newCity -> distance = distance;
+    newCity->time.hour = hour;
+    newCity->time.minute = minute;
+    strcpy(newCity ->name, name);
 }
 
 void printCity(City *city, char *string){
     printf("details:\n"
            "%s is the name of the city\n"
            "\t The distance between the airport and the city is of %d km\n"
-           "\t The duration of the flight is of %d hours",
+           "\t The duration of the flight is of %d hours and %d minutes",
            city->name,
            city->distance,
-           city->timeDuration);
+           city->time.hour,
+           city->time.minute);
 }
 

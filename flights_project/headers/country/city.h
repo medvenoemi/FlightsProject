@@ -6,14 +6,18 @@
 #define FLIGHTSPROJECT_CITY_H
 
 typedef struct{
+    int hour, minute;
+}timeDuration;
+
+typedef struct{
     char name[30];
     int distance;
-    int timeDuration;
+    timeDuration time;
 }City;
 
 void createCity(City ** city);
 void deleteCity(City**);
-void setCityData(City * country, char* name, int distance, int timeDuration);
+void setCityData(City * city, char* name, int distance, int hour, int minute);
 void printCity(City *city, char *string);
 
 #endif //FLIGHTSPROJECT_CITY_H

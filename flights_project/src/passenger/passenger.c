@@ -20,24 +20,25 @@ char *getGender(enum Gender type) {
 void createPassenger(Passenger** passenger) {
     *passenger = (Passenger*) malloc(sizeof(Passenger));
     if(!(*passenger)){
-        //printErrorMessages(MEMORY_ALLOCATION);
+        printErrorMessage(MEMORY_ALLOCATION);
     }
 }
 
-void setPassengerData(Passenger* passenger, char* name, char* nationality,
-                      enum Gender gender, BirthDate birthDate){
+void setPassengerData(Passenger* passenger, char* lastName, char* firstName, char* nationality,
+                      enum Gender gender, int year, int month, int day){
     passenger->id = ++numberOfPassengers;
-    strcpy(passenger->name, name);
+    strcpy(passenger->name.lastName, lastName);
+    strcpy(passenger->name.firstName, firstName);
     strcpy(passenger->nationality, nationality);
     passenger->gender = gender;
-    passenger->birthDate.year = birthDate.year;
-    passenger->birthDate.month = birthDate.month;
-    passenger->birthDate.day = birthDate.day;
+    passenger->birthDate.year = year;
+    passenger->birthDate.month = month;
+    passenger->birthDate.day = day;
 }
 
 void printPassenger(Passenger *passenger) {
     if(passenger == NULL){
-        //printErrorMessages(NULL_POINTER_EXCEPTION);
+        printErrorMessage(NULL_POINTER_EXCEPTION);
         printf("\nNULL POINTER\n");
     }
     else{
