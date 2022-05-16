@@ -4,26 +4,17 @@ set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
 
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
-  "C"
-  )
-# The set of files for implicit dependencies of each language:
-set(CMAKE_DEPENDS_CHECK_C
-  "C:/Users/Noemi/CLionProjects/FlightsProject/flights_project/src/calendar/calendar.c" "C:/Users/Noemi/CLionProjects/FlightsProject/cmake-build-debug/CMakeFiles/FlightsProject.dir/flights_project/src/calendar/calendar.c.obj"
-  "C:/Users/Noemi/CLionProjects/FlightsProject/flights_project/src/country/city.c" "C:/Users/Noemi/CLionProjects/FlightsProject/cmake-build-debug/CMakeFiles/FlightsProject.dir/flights_project/src/country/city.c.obj"
-  "C:/Users/Noemi/CLionProjects/FlightsProject/flights_project/src/country/country_array.c" "C:/Users/Noemi/CLionProjects/FlightsProject/cmake-build-debug/CMakeFiles/FlightsProject.dir/flights_project/src/country/country_array.c.obj"
-  "C:/Users/Noemi/CLionProjects/FlightsProject/main.c" "C:/Users/Noemi/CLionProjects/FlightsProject/cmake-build-debug/CMakeFiles/FlightsProject.dir/main.c.obj"
-  )
-set(CMAKE_C_COMPILER_ID "GNU")
-
-# The include file search paths:
-set(CMAKE_C_TARGET_INCLUDE_PATH
-  "../flights_project/headers/country"
-  "../flights_project/headers/calendar"
-  "../shared/headers"
   )
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "D:/EGYETEM/DSA/FlightsProjekt/projekt/flights_project/src/calendar/calendar.c" "CMakeFiles/FlightsProject.dir/flights_project/src/calendar/calendar.c.obj" "gcc" "CMakeFiles/FlightsProject.dir/flights_project/src/calendar/calendar.c.obj.d"
+  "D:/EGYETEM/DSA/FlightsProjekt/projekt/flights_project/src/country/city.c" "CMakeFiles/FlightsProject.dir/flights_project/src/country/city.c.obj" "gcc" "CMakeFiles/FlightsProject.dir/flights_project/src/country/city.c.obj.d"
+  "D:/EGYETEM/DSA/FlightsProjekt/projekt/flights_project/src/country/country_array.c" "CMakeFiles/FlightsProject.dir/flights_project/src/country/country_array.c.obj" "gcc" "CMakeFiles/FlightsProject.dir/flights_project/src/country/country_array.c.obj.d"
+  "D:/EGYETEM/DSA/FlightsProjekt/projekt/flights_project/src/flight/flight.c" "CMakeFiles/FlightsProject.dir/flights_project/src/flight/flight.c.obj" "gcc" "CMakeFiles/FlightsProject.dir/flights_project/src/flight/flight.c.obj.d"
+  "D:/EGYETEM/DSA/FlightsProjekt/projekt/flights_project/src/flight/flight_list.c" "CMakeFiles/FlightsProject.dir/flights_project/src/flight/flight_list.c.obj" "gcc" "CMakeFiles/FlightsProject.dir/flights_project/src/flight/flight_list.c.obj.d"
+  "D:/EGYETEM/DSA/FlightsProjekt/projekt/flights_project/src/passenger/passenger.c" "CMakeFiles/FlightsProject.dir/flights_project/src/passenger/passenger.c.obj" "gcc" "CMakeFiles/FlightsProject.dir/flights_project/src/passenger/passenger.c.obj.d"
+  "D:/EGYETEM/DSA/FlightsProjekt/projekt/main.c" "CMakeFiles/FlightsProject.dir/main.c.obj" "gcc" "CMakeFiles/FlightsProject.dir/main.c.obj.d"
   )
 
 # Targets to which this target links.
