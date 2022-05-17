@@ -19,6 +19,9 @@ void deleteCity(City** city){
 }
 
 void setCityData(City * newCity, char* name, int distance, int hour, int minute){
+    if(!newCity){
+        createCity(&newCity);
+    }
     newCity -> distance = distance;
     newCity->time.hour = hour;
     newCity->time.minute = minute;

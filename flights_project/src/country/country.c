@@ -65,7 +65,7 @@ void push(Country* country, City* city){
         country->cities[country->top]->distance = city->distance;
     }
     else{
-        printf("\nYou can't add more cities to %s!\n", country->name);
+        printf("\nYou can't add more cities to %s!\n", getCountry(country->name));
     }
 
 }
@@ -94,9 +94,9 @@ bool isEmpty(Country* country) {
 
 bool isFull(Country* country){
     if(country->top >= country->capacity-1){
-        return false;
+        return true;
     }
-    return true;
+    return false;
 }
 
 void display(Country* country){
