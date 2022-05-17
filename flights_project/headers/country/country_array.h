@@ -14,8 +14,11 @@ typedef struct{
 }CountryArray;
 
 void createCountryArray(CountryArray** countryArray, int capacity);
-bool addNewCountry(CountryArray* countryArray, Country * newCountry, int position);
+bool addNewCountry(CountryArray* countryArray, Country * newCountry);
+Country* findCountryByName(CountryArray* countryArray, enum Countries country);
 void deleteCountryArray(CountryArray** countryArray);
+void printAllCities(CountryArray* countryArray);
 void printCountries(CountryArray* countryArray);
+
 
 #endif //FLIGHTSPROJECT_COUNTRY_ARRAY_H

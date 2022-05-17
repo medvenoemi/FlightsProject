@@ -20,7 +20,7 @@ char *getGender(enum Gender type) {
 void createPassenger(Passenger** passenger) {
     *passenger = (Passenger*) malloc(sizeof(Passenger));
     if(!(*passenger)){
-        printErrorMessage(MEMORY_ALLOCATION);
+        //printErrorMessage(MEMORY_ALLOCATION);
     }
 }
 
@@ -38,7 +38,7 @@ void setPassengerData(Passenger* passenger, char* lastName, char* firstName, cha
 
 void printPassenger(Passenger *passenger) {
     if(passenger == NULL){
-        printErrorMessage(NULL_POINTER_EXCEPTION);
+        //printErrorMessage(NULL_POINTER_EXCEPTION);
         printf("\nNULL POINTER\n");
     }
     else{

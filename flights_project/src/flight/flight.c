@@ -106,7 +106,7 @@ void printAllPassengers(Flight* flight){
 
 void printFlightDetails(Flight* flight){
     if(flight == NULL){
-        printErrorMessage(NULL_POINTER_EXCEPTION);
+        //printErrorMessage(NULL_POINTER_EXCEPTION);
     }
     else{
         printf("\nFlight details:\n"

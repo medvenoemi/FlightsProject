@@ -12,32 +12,55 @@ void createCountryArray(CountryArray** countryArray, int capacity){
     if(!(*countryArray)){
         //printErrorMessages(MEMORY_ALLOCATION);
     }
-    (*countryArray)->Countries = (Country **)malloc(sizeof(Country *));
+    (*countryArray)->Countries = (Country**)malloc(capacity*sizeof(Country *));
     if(!(*countryArray)->Countries){
         //printErrorMessages(MEMORY_ALLOCATION);
+    }
+    for(int i=0; i<capacity;i++){
+        (*countryArray)->Countries[i] = (Country*) malloc(capacity*sizeof(Country));
+        if(!(*countryArray)->Countries[i]){
+            //printErrorMessages(MEMORY_ALLOCATION);
+        }
     }
     (*countryArray)->numberOfCountries = 0;
     (*countryArray)->capacity = capacity;
 }
 
-bool addNewCountry(CountryArray* countryArray, Country * newCountry, int position){
-    if(countryArray->capacity<countryArray->numberOfCountries){
-        countryArray->Countries[position]->name = newCountry->name;
-        countryArray->Countries[position]->cities = newCountry->cities;
+bool addNewCountry(CountryArray* countryArray, Country * newCountry){
+    if(countryArray->capacity < countryArray->numberOfCountries){
+        countryArray->Countries[countryArray->numberOfCountries]->name = newCountry->name;
+        countryArray->Countries[countryArray->numberOfCountries]->cities = newCountry->cities;
+        countryArray->numberOfCountries++;
+        return true;
     }
+    return false;
 }
 
 void deleteCountryArray(CountryArray** countryArray){
     for(int i=0;i<(*countryArray)->numberOfCountries;i++){
-        freeCountryStack((*countryArray)->Countries[i]);
+        free((*countryArray)->Countries[i]);
     }
     free((*countryArray)->Countries);
     free(*countryArray);
 }
 
-void printCountries(CountryArray* countryArray){
-    for(int i=0;i<countryArray->numberOfCountries;i++){
+void printAllCities(CountryArray* countryArray){
+    for(int i=0; i<countryArray->numberOfCountries; i++){
         display(countryArray->Countries[i]);
-        printf("\n");
     }
+}
+
+void printCountries(CountryArray *countryArray) {
+    for(int i=0;i<countryArray->numberOfCountries;i++){
+        printf("%s\n", countryArray->Countries[i]->name);
+    }
+}
+
+Country *findCountryByName(CountryArray *countryArray, enum Countries country) {
+    for(int i=0; i<countryArray->capacity; i++){
+        if(countryArray->Countries[i]->name == country){
+            return countryArray->Countries[i];
+        }
+    }
+    return NULL;
 }

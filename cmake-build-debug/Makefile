@@ -176,6 +176,30 @@ flights_project/src/country/city.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\FlightsProject.dir\build.make CMakeFiles/FlightsProject.dir/flights_project/src/country/city.c.s
 .PHONY : flights_project/src/country/city.c.s
 
+flights_project/src/country/country.obj: flights_project/src/country/country.c.obj
+.PHONY : flights_project/src/country/country.obj
+
+# target to build an object file
+flights_project/src/country/country.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FlightsProject.dir\build.make CMakeFiles/FlightsProject.dir/flights_project/src/country/country.c.obj
+.PHONY : flights_project/src/country/country.c.obj
+
+flights_project/src/country/country.i: flights_project/src/country/country.c.i
+.PHONY : flights_project/src/country/country.i
+
+# target to preprocess a source file
+flights_project/src/country/country.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FlightsProject.dir\build.make CMakeFiles/FlightsProject.dir/flights_project/src/country/country.c.i
+.PHONY : flights_project/src/country/country.c.i
+
+flights_project/src/country/country.s: flights_project/src/country/country.c.s
+.PHONY : flights_project/src/country/country.s
+
+# target to generate assembly for a file
+flights_project/src/country/country.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FlightsProject.dir\build.make CMakeFiles/FlightsProject.dir/flights_project/src/country/country.c.s
+.PHONY : flights_project/src/country/country.c.s
+
 flights_project/src/country/country_array.obj: flights_project/src/country/country_array.c.obj
 .PHONY : flights_project/src/country/country_array.obj
 
@@ -248,6 +272,30 @@ flights_project/src/flight/flight_list.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\FlightsProject.dir\build.make CMakeFiles/FlightsProject.dir/flights_project/src/flight/flight_list.c.s
 .PHONY : flights_project/src/flight/flight_list.c.s
 
+flights_project/src/manager/manager.obj: flights_project/src/manager/manager.c.obj
+.PHONY : flights_project/src/manager/manager.obj
+
+# target to build an object file
+flights_project/src/manager/manager.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FlightsProject.dir\build.make CMakeFiles/FlightsProject.dir/flights_project/src/manager/manager.c.obj
+.PHONY : flights_project/src/manager/manager.c.obj
+
+flights_project/src/manager/manager.i: flights_project/src/manager/manager.c.i
+.PHONY : flights_project/src/manager/manager.i
+
+# target to preprocess a source file
+flights_project/src/manager/manager.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FlightsProject.dir\build.make CMakeFiles/FlightsProject.dir/flights_project/src/manager/manager.c.i
+.PHONY : flights_project/src/manager/manager.c.i
+
+flights_project/src/manager/manager.s: flights_project/src/manager/manager.c.s
+.PHONY : flights_project/src/manager/manager.s
+
+# target to generate assembly for a file
+flights_project/src/manager/manager.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FlightsProject.dir\build.make CMakeFiles/FlightsProject.dir/flights_project/src/manager/manager.c.s
+.PHONY : flights_project/src/manager/manager.c.s
+
 flights_project/src/passenger/passenger.obj: flights_project/src/passenger/passenger.c.obj
 .PHONY : flights_project/src/passenger/passenger.obj
 
@@ -311,6 +359,9 @@ help:
 	@echo ... flights_project/src/country/city.obj
 	@echo ... flights_project/src/country/city.i
 	@echo ... flights_project/src/country/city.s
+	@echo ... flights_project/src/country/country.obj
+	@echo ... flights_project/src/country/country.i
+	@echo ... flights_project/src/country/country.s
 	@echo ... flights_project/src/country/country_array.obj
 	@echo ... flights_project/src/country/country_array.i
 	@echo ... flights_project/src/country/country_array.s
@@ -320,6 +371,9 @@ help:
 	@echo ... flights_project/src/flight/flight_list.obj
 	@echo ... flights_project/src/flight/flight_list.i
 	@echo ... flights_project/src/flight/flight_list.s
+	@echo ... flights_project/src/manager/manager.obj
+	@echo ... flights_project/src/manager/manager.i
+	@echo ... flights_project/src/manager/manager.s
 	@echo ... flights_project/src/passenger/passenger.obj
 	@echo ... flights_project/src/passenger/passenger.i
 	@echo ... flights_project/src/passenger/passenger.s

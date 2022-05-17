@@ -1,11 +1,9 @@
 //
-// Created by Noemi on 2022. 05. 10..
+// Created by timea on 5/17/2022.
 //
 
 #include "country.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+
 
 char* getCountry(enum Countries name){
     switch (name){
@@ -44,26 +42,32 @@ char* getCountry(enum Countries name){
     }
 }
 
-void createCountry(Country** country, unsigned int capacity, enum Countries name){
-    *country = (Country*)malloc(sizeof (Country));
+void createCountry(Country** country, int capacity, enum Countries name){
+    *country = (Country*)malloc(sizeof(Country));
     if(!(*country)){
         //printErrorMessages(MEMORY_ALLOCATION);
+    }
+    (*country)->cities = (City**) malloc(capacity*sizeof (City*));
+    for(int i=0; i<capacity; i++){
+        (*country)->cities[i] = (City*) malloc(capacity*sizeof(City));
     }
     (*country)->top = -1;
     (*country)->capacity = capacity;
     (*country)->name = name;
-    (*country)->cities = (City**) malloc(capacity*sizeof (City*));
-    for(int i=0; i<capacity; i++){
-        createCity((*country)->cities);
-    }
 }
 
 void push(Country* country, City* city){
-    country->top++;
-    strcpy(country->cities[country->top]->name, city->name);
-    country->cities[country->top]->time.hour = city->time.hour;
-    country->cities[country->top]->time.minute = city->time.minute;
-    country->cities[country->top]->distance = city->distance;
+    if(!isFull(country)){
+        country->top++;
+        strcpy(country->cities[country->top]->name, city->name);
+        country->cities[country->top]->time.hour = city->time.hour;
+        country->cities[country->top]->time.minute = city->time.minute;
+        country->cities[country->top]->distance = city->distance;
+    }
+    else{
+        printf("\nYou can't add more cities to %s!\n", country->name);
+    }
+
 }
 
 void pop(Country* country){
@@ -89,19 +93,19 @@ bool isEmpty(Country* country) {
 }
 
 bool isFull(Country* country){
-    if(country->top >= country->capacity){
-        return true;
+    if(country->top >= country->capacity-1){
+        return false;
     }
-    return false;
+    return true;
 }
 
 void display(Country* country){
     if(country->top == -1){
-        printf("There are no countries!");
+        printf("There are no cities!");
     }
     else{
-        for(int i=top; i>0; i--){
-            printf("%d\n", country[i]);
+        for(int i=0; i<=country->top; i++){
+            printCity(country->cities[i]);
         }
     }
 }
@@ -111,4 +115,10 @@ void freeCountryStack(Country* country) {
         deleteCity(&country->cities[country->top]);
     }
     free(country);
+}
+
+void setCities(Country *toCountry, Country *fromCountry) {
+    for(int i=0; i<fromCountry->top; i++){
+        setCityData(toCountry->cities[i], fromCountry->cities[i]->name, fromCountry->cities[i]->distance, fromCountry->cities[i]->time.hour, fromCountry->cities[i]->time.minute);
+    }
 }

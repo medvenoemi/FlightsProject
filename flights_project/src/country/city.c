@@ -8,14 +8,14 @@
 #include <string.h>
 
 void createCity(City ** city){
-    *city = (City *) malloc(sizeof (City));
+    *city = (City*) malloc(sizeof (City));
     if(!(*city)){
         //printErrorMessages(MEMORY_ALLOCATION);
     }
 }
 
 void deleteCity(City** city){
-    free(city);
+    free(*city);
 }
 
 void setCityData(City * newCity, char* name, int distance, int hour, int minute){
@@ -25,7 +25,7 @@ void setCityData(City * newCity, char* name, int distance, int hour, int minute)
     strcpy(newCity ->name, name);
 }
 
-void printCity(City *city, char *string){
+void printCity(City *city){
     printf("details:\n"
            "%s is the name of the city\n"
            "\t The distance between the airport and the city is of %d km\n"

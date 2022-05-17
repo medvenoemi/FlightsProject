@@ -28,6 +28,7 @@
 					<Add directory="D:/EGYETEM/DSA/FlightsProjekt/projekt/flights_project/headers/calendar"/>
 					<Add directory="D:/EGYETEM/DSA/FlightsProjekt/projekt/flights_project/headers/passenger"/>
 					<Add directory="D:/EGYETEM/DSA/FlightsProjekt/projekt/flights_project/headers/flight"/>
+					<Add directory="D:/EGYETEM/DSA/FlightsProjekt/projekt/flights_project/headers/manager"/>
 					<Add directory="D:/EGYETEM/DSA/FlightsProjekt/projekt/shared/headers"/>
 					<Add directory="C:/Program Files/JetBrains/CLion 2022.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
 					<Add directory="C:/Program Files/JetBrains/CLion 2022.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
@@ -52,6 +53,7 @@
 					<Add directory="D:/EGYETEM/DSA/FlightsProjekt/projekt/flights_project/headers/calendar"/>
 					<Add directory="D:/EGYETEM/DSA/FlightsProjekt/projekt/flights_project/headers/passenger"/>
 					<Add directory="D:/EGYETEM/DSA/FlightsProjekt/projekt/flights_project/headers/flight"/>
+					<Add directory="D:/EGYETEM/DSA/FlightsProjekt/projekt/flights_project/headers/manager"/>
 					<Add directory="D:/EGYETEM/DSA/FlightsProjekt/projekt/shared/headers"/>
 					<Add directory="C:/Program Files/JetBrains/CLion 2022.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
 					<Add directory="C:/Program Files/JetBrains/CLion 2022.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
@@ -95,6 +97,9 @@
 		<Unit filename="D:/EGYETEM/DSA/FlightsProjekt/projekt/flights_project/headers/country/city.h">
 			<Option target="FlightsProject"/>
 		</Unit>
+		<Unit filename="D:/EGYETEM/DSA/FlightsProjekt/projekt/flights_project/headers/country/country.h">
+			<Option target="FlightsProject"/>
+		</Unit>
 		<Unit filename="D:/EGYETEM/DSA/FlightsProjekt/projekt/flights_project/headers/country/country_array.h">
 			<Option target="FlightsProject"/>
 		</Unit>
@@ -102,6 +107,9 @@
 			<Option target="FlightsProject"/>
 		</Unit>
 		<Unit filename="D:/EGYETEM/DSA/FlightsProjekt/projekt/flights_project/headers/flight/flight_list.h">
+			<Option target="FlightsProject"/>
+		</Unit>
+		<Unit filename="D:/EGYETEM/DSA/FlightsProjekt/projekt/flights_project/headers/manager/manager.h">
 			<Option target="FlightsProject"/>
 		</Unit>
 		<Unit filename="D:/EGYETEM/DSA/FlightsProjekt/projekt/flights_project/headers/passenger/passenger.h">
@@ -116,6 +124,9 @@
 		<Unit filename="D:/EGYETEM/DSA/FlightsProjekt/projekt/flights_project/src/country/city.c">
 			<Option target="FlightsProject"/>
 		</Unit>
+		<Unit filename="D:/EGYETEM/DSA/FlightsProjekt/projekt/flights_project/src/country/country.c">
+			<Option target="FlightsProject"/>
+		</Unit>
 		<Unit filename="D:/EGYETEM/DSA/FlightsProjekt/projekt/flights_project/src/country/country_array.c">
 			<Option target="FlightsProject"/>
 		</Unit>
@@ -123,6 +134,9 @@
 			<Option target="FlightsProject"/>
 		</Unit>
 		<Unit filename="D:/EGYETEM/DSA/FlightsProjekt/projekt/flights_project/src/flight/flight_list.c">
+			<Option target="FlightsProject"/>
+		</Unit>
+		<Unit filename="D:/EGYETEM/DSA/FlightsProjekt/projekt/flights_project/src/manager/manager.c">
 			<Option target="FlightsProject"/>
 		</Unit>
 		<Unit filename="D:/EGYETEM/DSA/FlightsProjekt/projekt/flights_project/src/passenger/passenger.c">

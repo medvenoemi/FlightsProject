@@ -173,6 +173,36 @@ CMakeFiles/FlightsProject.dir/flights_project/src/flight/flight_list.c.s: cmake_
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/FlightsProject.dir/flights_project/src/flight/flight_list.c.s"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\EGYETEM\DSA\FlightsProjekt\projekt\flights_project\src\flight\flight_list.c -o CMakeFiles\FlightsProject.dir\flights_project\src\flight\flight_list.c.s
 
+CMakeFiles/FlightsProject.dir/flights_project/src/manager/manager.c.obj: CMakeFiles/FlightsProject.dir/flags.make
+CMakeFiles/FlightsProject.dir/flights_project/src/manager/manager.c.obj: CMakeFiles/FlightsProject.dir/includes_C.rsp
+CMakeFiles/FlightsProject.dir/flights_project/src/manager/manager.c.obj: ../flights_project/src/manager/manager.c
+CMakeFiles/FlightsProject.dir/flights_project/src/manager/manager.c.obj: CMakeFiles/FlightsProject.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\EGYETEM\DSA\FlightsProjekt\projekt\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/FlightsProject.dir/flights_project/src/manager/manager.c.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/FlightsProject.dir/flights_project/src/manager/manager.c.obj -MF CMakeFiles\FlightsProject.dir\flights_project\src\manager\manager.c.obj.d -o CMakeFiles\FlightsProject.dir\flights_project\src\manager\manager.c.obj -c D:\EGYETEM\DSA\FlightsProjekt\projekt\flights_project\src\manager\manager.c
+
+CMakeFiles/FlightsProject.dir/flights_project/src/manager/manager.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/FlightsProject.dir/flights_project/src/manager/manager.c.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\EGYETEM\DSA\FlightsProjekt\projekt\flights_project\src\manager\manager.c > CMakeFiles\FlightsProject.dir\flights_project\src\manager\manager.c.i
+
+CMakeFiles/FlightsProject.dir/flights_project/src/manager/manager.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/FlightsProject.dir/flights_project/src/manager/manager.c.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\EGYETEM\DSA\FlightsProjekt\projekt\flights_project\src\manager\manager.c -o CMakeFiles\FlightsProject.dir\flights_project\src\manager\manager.c.s
+
+CMakeFiles/FlightsProject.dir/flights_project/src/country/country.c.obj: CMakeFiles/FlightsProject.dir/flags.make
+CMakeFiles/FlightsProject.dir/flights_project/src/country/country.c.obj: CMakeFiles/FlightsProject.dir/includes_C.rsp
+CMakeFiles/FlightsProject.dir/flights_project/src/country/country.c.obj: ../flights_project/src/country/country.c
+CMakeFiles/FlightsProject.dir/flights_project/src/country/country.c.obj: CMakeFiles/FlightsProject.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\EGYETEM\DSA\FlightsProjekt\projekt\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/FlightsProject.dir/flights_project/src/country/country.c.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/FlightsProject.dir/flights_project/src/country/country.c.obj -MF CMakeFiles\FlightsProject.dir\flights_project\src\country\country.c.obj.d -o CMakeFiles\FlightsProject.dir\flights_project\src\country\country.c.obj -c D:\EGYETEM\DSA\FlightsProjekt\projekt\flights_project\src\country\country.c
+
+CMakeFiles/FlightsProject.dir/flights_project/src/country/country.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/FlightsProject.dir/flights_project/src/country/country.c.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\EGYETEM\DSA\FlightsProjekt\projekt\flights_project\src\country\country.c > CMakeFiles\FlightsProject.dir\flights_project\src\country\country.c.i
+
+CMakeFiles/FlightsProject.dir/flights_project/src/country/country.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/FlightsProject.dir/flights_project/src/country/country.c.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\EGYETEM\DSA\FlightsProjekt\projekt\flights_project\src\country\country.c -o CMakeFiles\FlightsProject.dir\flights_project\src\country\country.c.s
+
 # Object files for target FlightsProject
 FlightsProject_OBJECTS = \
 "CMakeFiles/FlightsProject.dir/main.c.obj" \
@@ -181,7 +211,9 @@ FlightsProject_OBJECTS = \
 "CMakeFiles/FlightsProject.dir/flights_project/src/calendar/calendar.c.obj" \
 "CMakeFiles/FlightsProject.dir/flights_project/src/passenger/passenger.c.obj" \
 "CMakeFiles/FlightsProject.dir/flights_project/src/flight/flight.c.obj" \
-"CMakeFiles/FlightsProject.dir/flights_project/src/flight/flight_list.c.obj"
+"CMakeFiles/FlightsProject.dir/flights_project/src/flight/flight_list.c.obj" \
+"CMakeFiles/FlightsProject.dir/flights_project/src/manager/manager.c.obj" \
+"CMakeFiles/FlightsProject.dir/flights_project/src/country/country.c.obj"
 
 # External object files for target FlightsProject
 FlightsProject_EXTERNAL_OBJECTS =
@@ -193,11 +225,13 @@ FlightsProject.exe: CMakeFiles/FlightsProject.dir/flights_project/src/calendar/c
 FlightsProject.exe: CMakeFiles/FlightsProject.dir/flights_project/src/passenger/passenger.c.obj
 FlightsProject.exe: CMakeFiles/FlightsProject.dir/flights_project/src/flight/flight.c.obj
 FlightsProject.exe: CMakeFiles/FlightsProject.dir/flights_project/src/flight/flight_list.c.obj
+FlightsProject.exe: CMakeFiles/FlightsProject.dir/flights_project/src/manager/manager.c.obj
+FlightsProject.exe: CMakeFiles/FlightsProject.dir/flights_project/src/country/country.c.obj
 FlightsProject.exe: CMakeFiles/FlightsProject.dir/build.make
 FlightsProject.exe: CMakeFiles/FlightsProject.dir/linklibs.rsp
 FlightsProject.exe: CMakeFiles/FlightsProject.dir/objects1.rsp
 FlightsProject.exe: CMakeFiles/FlightsProject.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\EGYETEM\DSA\FlightsProjekt\projekt\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking C executable FlightsProject.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\EGYETEM\DSA\FlightsProjekt\projekt\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking C executable FlightsProject.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\FlightsProject.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

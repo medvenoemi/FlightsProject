@@ -18,6 +18,6 @@ typedef struct{
 void createCity(City ** city);
 void deleteCity(City**);
 void setCityData(City * city, char* name, int distance, int hour, int minute);
-void printCity(City *city, char *string);
+void printCity(City *city);
 
 #endif //FLIGHTSPROJECT_CITY_H

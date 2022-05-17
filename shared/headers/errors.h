@@ -13,6 +13,6 @@ enum ErrorType{
     UNSUCCESSFUL_OPERATION
 };
 
-void printErrorMessage(enum ErrorType);
+void printErrorMessage(enum ErrorType type);
 
 #endif //FLIGHTSPROJECT_ERRORS_H

@@ -76,21 +76,19 @@ Flight* findFlightInList(FlightNode* flightNode, int flightId){
     return NULL;
 }
 
-/*
-Flight **findFlightByCityName(FlightNode *flightNode, char *city) {
-    Flight** foundFlights = (Flight**) malloc(flightNode->flightValue->capacity, )
+
+void printFlightsByCityName(FlightNode *flightNode, char *city) {
     if(flightNode != NULL){
         FlightNode* p = flightNode;
         while(p != NULL){
-            if(strcmp(flightNode->flightValue->destination->name, city) != 0){
-                return p->flightValue;
+            if(strcmp(flightNode->flightValue->destination->name, city) == 0){
+                printFlightDetails(flightNode->flightValue);
             }
             p = p->next;
         }
     }
-    return NULL;
 }
- */
+
 
 void printFlightList(FlightNode *flightNode) {
     FlightNode* p = flightNode;
