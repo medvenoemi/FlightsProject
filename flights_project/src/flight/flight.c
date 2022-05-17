@@ -24,14 +24,15 @@ void createFlight(Flight** flight, int capacity) {
     (*flight)->flightId = ++numberOfFlights;
 }
 
-void setFlightData(Flight* flight, Date date, TakeOff takeOff, Landing landing, City* city, int price){
-    flight->date.year = date.year;
-    flight->date.month = date.month;
-    flight->date.day = date.day;
-    flight->takeOff.hour = takeOff.hour;
-    flight->takeOff.minute = takeOff.minute;
-    flight->landing.hour = landing.hour;
-    flight->landing.minute = landing.minute;
+void setFlightData(Flight* flight, int year, int month, int day, int takeOffHour, int takeOffMinute,
+                   int landingHour, int landingMinute, City* city, int price){
+    flight->date.year = year;
+    flight->date.month = month;
+    flight->date.day = day;
+    flight->takeOff.hour = takeOffHour;
+    flight->takeOff.minute = takeOffMinute;
+    flight->landing.hour = landingHour;
+    flight->landing.minute = landingMinute;
     setCityData(flight->destination, city->name, city->distance, city->time.hour, city->time.minute);
     flight->price = price;
 }
@@ -105,7 +106,7 @@ void printAllPassengers(Flight* flight){
 
 void printFlightDetails(Flight* flight){
     if(flight == NULL){
-        printf("\nNULL PONTER!\n");
+        printErrorMessage(NULL_POINTER_EXCEPTION);
     }
     else{
         printf("\nFlight details:\n"

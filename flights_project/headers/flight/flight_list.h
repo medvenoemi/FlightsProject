@@ -6,6 +6,7 @@
 #define FLIGHTSPROJECT_FLIGHT_LIST_H
 
 #include "flight.h"
+#include <string.h>
 
 typedef struct FlightNode {
     Flight* flightValue;
@@ -15,6 +16,7 @@ typedef struct FlightNode {
 void createFlightNode(FlightNode** flightNode, Flight* flightValue);
 void printFlightList(FlightNode* flightNode);
 Flight* findFlightInList(FlightNode* flightNode, int flightId);
+Flight** findFlightByCityName(FlightNode* flightNode, char* city);
 void insertFirst(FlightNode** flightNode, Flight* flightValue);
 void insertLast(FlightNode** flightNode, Flight* flightValue);
 Flight* removeFirst(FlightNode** flightNode);

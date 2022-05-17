@@ -72,17 +72,11 @@ int main() {
     createFlight(&flight4, 30);
 
 
-    //Set flight
-    /*
-    Date* date1;
-    date1->year = 2022; date1->month = 2; date1->day = 20;
-    TakeOff* takeOff1;
-    takeOff1->hour = 5; takeOff1->minute = 10;
-    Landing* landing1;
-    landing1->hour = 7; landing1->minute = 20;
-    setFlightData(flight1, date1, takeOff1, landing1, city2, 300);
+    //Set flights
+    setFlightData(flight1, 2022, 2, 20, 5, 10, 7, 20, city2, 300);
+    setFlightData(flight2, 2022, 8, 0, 22, 45, 7, 20, city4, 510);
 
-    */
+
 
     //Read passengers from file and add them to flights
     FILE *fin = fopen("passengers.txt", "r");
@@ -142,7 +136,7 @@ int main() {
     switch (choice) {
         case 0:{
             int choice1;
-            printf("Please choose between these options:\n 1.show countries(1)\n 2.show calendar(2)\n 3.show all flights(3)\n");
+            printf("Please choose between these options:\n 1. Show countries(1)\n 2. Show calendar(2)\n 3. Show all flights(3)\n 4. Choose flight");
             scanf("%d", &choice1);
             switch (choice1) {
                 case 1:{
@@ -159,6 +153,10 @@ int main() {
                 case 3:{
                     printFlightList(flights);
                     break;
+                }
+                case 4:{
+                    printf("\nWhich city do you want to go?\n");
+
                 }
                 default:
                     printf("\nWrong choice!\n");

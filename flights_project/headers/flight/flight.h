@@ -33,7 +33,7 @@ typedef struct Flight{
 }Flight;
 
 void createFlight(Flight** flight,int capacity);
-void setFlightData(Flight* flight, Date date, TakeOff takeOff, Landing landing, City* city, int price);
+void setFlightData(Flight* flight, int year, int month, int day, int takeOffHour, int takeOffMinute,int landingHour, int landingMinute, City* city, int price);
 void insertPassenger(Flight* flight, Passenger* passenger);
 void printAllPassengers(Flight* flight);
 void printFlightDetails(Flight* flight);

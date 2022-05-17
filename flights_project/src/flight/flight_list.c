@@ -10,7 +10,10 @@ void createFlightNode(FlightNode** flightNode, Flight *flightValue) {
     }
     (*flightNode)->next = NULL;
     createFlight(&(*flightNode)->flightValue, flightValue->capacity);
-    setFlightData((*flightNode)->flightValue, flightValue->date, flightValue->takeOff, flightValue->landing, flightValue->destination, flightValue->price);
+    setFlightData((*flightNode)->flightValue, flightValue->date.year, flightValue->date.month,
+                  flightValue->date.day, flightValue->takeOff.hour, flightValue->takeOff.minute,
+                  flightValue->landing.hour, flightValue->landing.minute,
+                  flightValue->destination, flightValue->price);
 }
 
 void insertFirst(FlightNode** flightNode, Flight* flightValue){
@@ -73,6 +76,22 @@ Flight* findFlightInList(FlightNode* flightNode, int flightId){
     return NULL;
 }
 
+/*
+Flight **findFlightByCityName(FlightNode *flightNode, char *city) {
+    Flight** foundFlights = (Flight**) malloc(flightNode->flightValue->capacity, )
+    if(flightNode != NULL){
+        FlightNode* p = flightNode;
+        while(p != NULL){
+            if(strcmp(flightNode->flightValue->destination->name, city) != 0){
+                return p->flightValue;
+            }
+            p = p->next;
+        }
+    }
+    return NULL;
+}
+ */
+
 void printFlightList(FlightNode *flightNode) {
     FlightNode* p = flightNode;
     while(p != NULL){
@@ -91,5 +110,7 @@ void deleteFlightList(FlightNode **flightNode) {
         }
     }
 }
+
+
 
 
