@@ -27,10 +27,10 @@ void createCountryArray(CountryArray** countryArray, int capacity){
 }
 
 bool addNewCountry(CountryArray* countryArray, Country * newCountry){
-    if(countryArray->capacity < countryArray->numberOfCountries){
+    if(countryArray->numberOfCountries < countryArray->capacity){
         countryArray->Countries[countryArray->numberOfCountries]->name = newCountry->name;
         countryArray->Countries[countryArray->numberOfCountries]->cities = newCountry->cities;
-        countryArray->numberOfCountries++;
+        countryArray->numberOfCountries = countryArray->numberOfCountries + 1;
         return true;
     }
     return false;
@@ -46,14 +46,23 @@ void deleteCountryArray(CountryArray** countryArray){
 
 void printAllCities(CountryArray* countryArray){
     for(int i=0; i<countryArray->numberOfCountries; i++){
-        display(countryArray->Countries[i]);
+        if(countryArray->Countries[i]->top == -1){
+            printf("There are no cities!");
+            continue;
+        }
+        else{
+            for(int j=0; j<=countryArray->Countries[i]->top; j++){
+                printCity(countryArray->Countries[i]->cities[j]);
+            }
+        }
     }
 }
 
 void printCountries(CountryArray *countryArray) {
-    for(int i=0;i<countryArray->numberOfCountries;i++){
-        printf("%s\n", countryArray->Countries[i]->name);
+    for(int i=0; i<countryArray->numberOfCountries; i++){
+        printf("\n%s", getCountry(countryArray->Countries[i]->name));
     }
+    printf("\n");
 }
 
 Country *findCountryByName(CountryArray *countryArray, enum Countries country) {

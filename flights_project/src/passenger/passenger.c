@@ -22,11 +22,12 @@ void createPassenger(Passenger** passenger) {
     if(!(*passenger)){
         //printErrorMessage(MEMORY_ALLOCATION);
     }
+    (*passenger)->id = ++numberOfPassengers;
+
 }
 
 void setPassengerData(Passenger* passenger, char* lastName, char* firstName, char* nationality,
                       enum Gender gender, int year, int month, int day){
-    passenger->id = ++numberOfPassengers;
     strcpy(passenger->name.lastName, lastName);
     strcpy(passenger->name.firstName, firstName);
     strcpy(passenger->nationality, nationality);

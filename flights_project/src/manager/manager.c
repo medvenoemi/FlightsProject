@@ -77,65 +77,73 @@ void airport() {
     FILE *fin = fopen("passengers.txt", "r");
     if(!fin){
         //printErrorMessage(FILE_NOT_FOUND);
-        exit(1);
+        exit(10);
     }
 
     for(int i=0; i<3; i++){
         Passenger* passenger;
         createPassenger(&passenger);
-        fscanf(fin, "%s%s%s%i%i%i%i", passenger->name.lastName, passenger->name.firstName,
-               passenger->nationality, passenger->gender, passenger->birthDate.year, passenger->birthDate.month,
-               passenger->birthDate.day);
+        char lName[20], fName[20], nationality[20];
+        int gender, year, month, day;
+        fscanf(fin, "%s%s%s%i%i%i%i", lName, fName, nationality, &gender, &year, &month, &day);
+        setPassengerData(passenger, lName, fName, nationality, gender, year, month, day);
         insertPassenger(flight1, passenger);
     }
 
     for(int i=3; i<8; i++){
         Passenger* passenger;
         createPassenger(&passenger);
-        fscanf(fin, "%s%s%s%i%i%i%i", passenger->name.lastName, passenger->name.firstName,
-               passenger->nationality, passenger->gender, passenger->birthDate.year, passenger->birthDate.month,
-               passenger->birthDate.day);
+        char lName[20], fName[20], nationality[20];
+        int gender, year, month, day;
+        fscanf(fin, "%s%s%s%i%i%i%i", lName, fName, nationality, &gender, &year, &month, &day);
+        setPassengerData(passenger, lName, fName, nationality, gender, year, month, day);
         insertPassenger(flight2, passenger);
     }
 
     for(int i=8; i<11; i++){
         Passenger* passenger;
         createPassenger(&passenger);
-        fscanf(fin, "%s%s%s%i%i%i%i", passenger->name.lastName, passenger->name.firstName,
-               passenger->nationality, passenger->gender, passenger->birthDate.year, passenger->birthDate.month,
-               passenger->birthDate.day);
+        char lName[20], fName[20], nationality[20];
+        int gender, year, month, day;
+        fscanf(fin, "%s%s%s%i%i%i%i", lName, fName, nationality, &gender, &year, &month, &day);
+        setPassengerData(passenger, lName, fName, nationality, gender, year, month, day);
         insertPassenger(flight3, passenger);
     }
 
     for(int i=11; i<16; i++){
         Passenger* passenger;
         createPassenger(&passenger);
-        fscanf(fin, "%s%s%s%i%i%i%i", passenger->name.lastName, passenger->name.firstName,
-               passenger->nationality, passenger->gender, passenger->birthDate.year, passenger->birthDate.month,
-               passenger->birthDate.day);
+        char lName[20], fName[20], nationality[20];
+        int gender, year, month, day;
+        fscanf(fin, "%s%s%s%i%i%i%i", lName, fName, nationality, &gender, &year, &month, &day);
+        setPassengerData(passenger, lName, fName, nationality, gender, year, month, day);
         insertPassenger(flight4, passenger);
     }
 
 
     //Create flight list and add flights
     FlightNode* flights;
-    insertLast(&flights, flight1);
+    createFlightNode(&flights, flight1);
     insertLast(&flights, flight2);
-    insertLast(&flights, flight3);
-    insertLast(&flights, flight4);
+    //insertLast(&flights, flight3);
+    //insertLast(&flights, flight4);
+
+    printAllCities(countries);
+
 
 
     int choice;
-    printf("\nPlease choose between passenger or system view (0-Passenger, 1-System):\n");
+    printf("\n\nPlease choose between passenger or system view (0-Passenger, 1-System):\n");
     scanf("%i", &choice);
     switch (choice) {
         case 0:{
             while(1) {
                 int choice1;
-                printf("Please choose between these options:\n 1. Show countries(1)\n 2. Show calendar(2)\n 3. Show all flights(3)\n 4. Reservation\n 5. Exit\n");
+                printf("\nPlease choose between these options:\n 1. Show countries\n 2. Show calendar\n 3. Show all flights\n 4. Reservation\n 5. Exit\n");
                 scanf("%d", &choice1);
                 switch (choice1) {
                     case 1: {
+                        printf("\nCountries:\n");
                         printCountries(countries);
                         break;
                     }
@@ -188,7 +196,7 @@ void airport() {
             }
         }
         case 1:{
-            printf("Please choose between these options:\n 1. Add new city(1)\n 2. Add new country(2)\n 3. Modify a flight\n 4. Modify flights\n 5. Exit\n");
+            printf("Please choose between these options:\n 1. Add new city\n 2. Add new country\n 3. Modify a flight\n 4. Modify flights\n 5. Exit\n");
             int choice2;
             scanf("%i", &choice2);
             switch (choice2) {

@@ -22,14 +22,14 @@ void setCityData(City * newCity, char* name, int distance, int hour, int minute)
     if(!newCity){
         createCity(&newCity);
     }
-    newCity -> distance = distance;
+    newCity->distance = distance;
     newCity->time.hour = hour;
     newCity->time.minute = minute;
     strcpy(newCity ->name, name);
 }
 
 void printCity(City *city){
-    printf("details:\n"
+    printf("\ndetails:\n"
            "%s is the name of the city\n"
            "\t The distance between the airport and the city is of %d km\n"
            "\t The duration of the flight is of %d hours and %d minutes",

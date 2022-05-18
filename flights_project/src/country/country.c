@@ -38,7 +38,7 @@ char* getCountry(enum Countries name){
             return "United Kingdom";
             break;
         default:
-            return "Undifined";
+            return "Undefined";
     }
 }
 

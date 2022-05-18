@@ -19,6 +19,7 @@ void createFlight(Flight** flight, int capacity) {
         createPassenger(&(*flight)->table[i]);
         (*flight)->table[i]->id = -1;
     }
+    createCity(&(*flight)->destination);
     (*flight)->capacity = capacity;
     (*flight)->numberOfPassengers = 0;
     (*flight)->flightId = ++numberOfFlights;
@@ -46,7 +47,6 @@ void insertPassenger(Flight* flight, Passenger* passenger) {
             flight->table[j]->seat = j;
             flight->table[j]->id = passenger->id;
             printf("\nPassenger with the ID %i inserted\n", passenger->id);
-            flight->numberOfPassengers++;
             return;
         }
         else{
@@ -107,6 +107,7 @@ void printAllPassengers(Flight* flight){
 void printFlightDetails(Flight* flight){
     if(flight == NULL){
         //printErrorMessage(NULL_POINTER_EXCEPTION);
+        printf("Null pointer!");
     }
     else{
         printf("\nFlight details:\n"
@@ -115,11 +116,10 @@ void printFlightDetails(Flight* flight){
                "\t - DATE: %i/%i/%i\n"
                "\t - TAKEOFF: %i:%i\n"
                "\t - LANDING: %i:%i\n"
-               "\t - PRICE: %i\n"
-               "\t - NUMBER OF PASSENGERS\n",
+               "\t - PRICE: %i\n",
                flight->flightId, flight->destination, flight->date.year, flight->date.month, flight->date.day,
                flight->takeOff.hour, flight->takeOff.minute, flight->landing.hour, flight->landing.minute,
-               flight->price, flight->numberOfPassengers);
+               flight->price);
     }
 }
 
