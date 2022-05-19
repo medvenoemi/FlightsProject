@@ -108,7 +108,7 @@ void display(Country* country){
     if(country == NULL){
         printf("Null");
     }
-    if(country->counter == 0){
+    if(country->top == -1){
         printf("There are no cities!");
     }
     else{

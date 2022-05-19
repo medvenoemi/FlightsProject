@@ -86,16 +86,19 @@ Flight* findFlightInList(FlightNode* flightNode, int flightId){
 }
 
 
-void printFlightsByCityName(FlightNode *flightNode, char *city) {
+bool printFlightsByCityName(FlightNode *flightNode, char *city) {
+    bool result = false;
     if(flightNode != NULL){
         FlightNode* p = flightNode;
         while(p != NULL){
             if(strcmp(p->flightValue->destination->name, city) == 0){
                 printFlightDetails(p->flightValue);
+                result = true;
             }
             p = p->next;
         }
     }
+    return result;
 }
 
 

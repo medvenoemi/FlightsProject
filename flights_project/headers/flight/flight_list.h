@@ -16,7 +16,7 @@ typedef struct FlightNode {
 void createFlightNode(FlightNode** flightNode, Flight* flightValue);
 void printFlightList(FlightNode* flightNode);
 Flight* findFlightInList(FlightNode* flightNode, int flightId);
-void printFlightsByCityName(FlightNode* flightNode, char* city);
+bool printFlightsByCityName(FlightNode* flightNode, char* city);
 void insertFirst(FlightNode** flightNode, Flight* flightValue);
 void insertLast(FlightNode** flightNode, Flight* flightValue);
 Flight* removeFirst(FlightNode** flightNode);

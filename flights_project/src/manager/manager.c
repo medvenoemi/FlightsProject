@@ -5,82 +5,97 @@
 
 void airport() {
 
-    //Create countries
-    Country* country1, *country2, *country3, *country4;
-    createCountry(&country1, 3, 0);
-    createCountry(&country2, 3, 1);
-    createCountry(&country3, 3, 2);
-    createCountry(&country4, 3, 3);
+    FILE *fin, *cntry, *cities1, *cities2, *cities3, *cities4;
+    fin = fopen("passengers.txt", "r");
+    cntry = fopen("countries.txt", "r");
+    cities1 = fopen("cities1.txt", "r");
+    cities2 = fopen("cities2.txt", "r");
+    cities3 = fopen("cities3.txt", "r");
+    cities4 = fopen("cities4.txt", "r");
 
-
-    //Create and add cities to countries
-    City* city1;
-    createCity(&city1);
-    setCityData(city1, "Paris", 1997, 2, 28);
-    push(country1, city1);
-
-    City* city2;
-    createCity(&city2);
-    setCityData(city2, "Lyon", 1907, 2, 10);
-    push(country1, city2);
-
-    City* city3;
-    createCity(&city3);
-    setCityData(city3, "Barcelona", 2440, 2, 48);
-    push(country2, city3);
-
-    City* city4;
-    createCity(&city4);
-    setCityData(city4, "Toronto", 8128, 14, 45);
-    push(country3, city4);
-
-    City* city5;
-    createCity(&city5);
-    setCityData(city5, "Ottawa", 7463 , 11, 55);
-    push(country3, city5);
-
-    City* city6;
-    createCity(&city6);
-    setCityData(city6, "Peking", 7042 , 18, 12);
-    push(country4, city6);
-
-    City* city7;
-    createCity(&city7);
-    setCityData(city7, "Shanghai", 8966 , 14, 57);
-    push(country4, city7);
-
-
-    //Create country array and add all countries
-    CountryArray* countries;
-    createCountryArray(&countries, 10);
-    addNewCountry(countries, country1);
-    addNewCountry(countries, country2);
-    addNewCountry(countries, country3);
-    addNewCountry(countries, country4);
-
-
-    //Create flights
-    Flight* flight1, *flight2, *flight3, *flight4;
-    createFlight(&flight1, 30);
-    createFlight(&flight2, 30);
-    createFlight(&flight3, 30);
-    createFlight(&flight4, 30);
-
-
-    //Set flights
-    setFlightData(flight1, 2022, 2, 20, 5, 10, 7, 20, city2, 300);
-    setFlightData(flight2, 2022, 8, 0, 22, 45, 7, 20, city4, 510);
-    setFlightData(flight3, 2022, 5, 13, 1, 20, 3, 30, city2, 150);
-
-
-    //Read passengers from file and add them to flights
-    FILE *fin = fopen("passengers.txt", "r");
-    if(!fin){
+    if(!fin || !cntry || !cities1 || !cities2 || !cities3 || !cities4){
         //printErrorMessage(FILE_NOT_FOUND);
         exit(10);
     }
 
-    for(int i=0; i<3; i++){
+    //Create countries
+    Country* country1, *country2, *country3, *country4;
+    //Create cities
+    City *city1, *city2, *city3, *city4, *city5, *city6, *city7;
+
+    //Create country array
+    CountryArray* countries;
+    createCountryArray(&countries, 10);
+
+    int nrOfCountries, i;
+    fscanf(cntry, "%i", &nrOfCountries);
+    for(i=0; i<nrOfCountries; i++) {
+        int capacity, countryName;
+        fscanf(cntry, "%i%i", &capacity, &countryName);
+        switch (i) {
+            case 0: {
+                createCountry(&country1, capacity, countryName);
+                createCity(&city1);
+                fscanf(cities1, "%s%i%i%i",city1->name, &city1->distance, &city1->time.hour, &city1->time.minute);
+                push(country1, city1);
+                createCity(&city2);
+                fscanf(cities1, "%s%i%i%i",city2->name, &city2->distance, &city2->time.hour, &city2->time.minute);
+                push(country1, city2);
+                addNewCountry(countries, country1);
+                break;
+            }
+            case 1: {
+                createCountry(&country2, capacity, countryName);
+                createCity(&city3);
+                fscanf(cities2, "%s%i%i%i",city3->name, &city3->distance, &city3->time.hour, &city3->time.minute);
+                push(country2, city3);
+                addNewCountry(countries, country2);
+                break;
+            }
+            case 2: {
+                createCountry(&country3, capacity, countryName);
+                createCity(&city4);
+                fscanf(cities3, "%s%i%i%i",city4->name, &city4->distance, &city4->time.hour, &city4->time.minute);
+                push(country3, city4);
+                createCity(&city5);
+                fscanf(cities3, "%s%i%i%i",city5->name, &city5->distance, &city5->time.hour, &city5->time.minute);
+                push(country3, city5);
+                addNewCountry(countries, country3);
+                break;
+            }
+            case 3: {
+                createCountry(&country4, capacity, countryName);
+                createCity(&city6);
+                fscanf(cities4, "%s%i%i%i",city6->name, &city6->distance, &city6->time.hour, &city6->time.minute);
+                push(country4, city6);
+                createCity(&city7);
+                fscanf(cities4, "%s%i%i%i",city7->name, &city7->distance, &city7->time.hour, &city7->time.minute);
+                push(country4, city7);
+                addNewCountry(countries, country4);
+                break;
+            }
+        }
+    }
+
+
+    //Create flights
+    Flight* flight1, *flight2, *flight3, *flight4;
+    int flightCapacity=30;
+    createFlight(&flight1, flightCapacity);
+    createFlight(&flight2, flightCapacity);
+    createFlight(&flight3, flightCapacity);
+    createFlight(&flight4, flightCapacity);
+
+
+    //Set flights
+    setFlightData(flight1, 2022, 2, 20, 5, 10, 7, 20, city2, 300);
+    setFlightData(flight2, 2022, 8, 9, 22, 45, 7, 20, city4, 510);
+    setFlightData(flight3, 2022, 5, 13, 1, 20, 3, 30, city2, 150);
+    setFlightData(flight4, 2022, 11, 4, 12, 0, 3, 11, city3, 200);
+
+
+    //Read passengers from file and add them to flights
+    for(i=0; i<3; i++){
         Passenger* passenger;
         createPassenger(&passenger);
         char lName[20], fName[20], nationality[20];
@@ -90,7 +105,7 @@ void airport() {
         insertPassenger(flight1, passenger);
     }
 
-    for(int i=3; i<8; i++){
+    for(i=3; i<8; i++){
         Passenger* passenger;
         createPassenger(&passenger);
         char lName[20], fName[20], nationality[20];
@@ -100,7 +115,7 @@ void airport() {
         insertPassenger(flight2, passenger);
     }
 
-    for(int i=8; i<11; i++){
+    for(i=8; i<11; i++){
         Passenger* passenger;
         createPassenger(&passenger);
         char lName[20], fName[20], nationality[20];
@@ -110,7 +125,7 @@ void airport() {
         insertPassenger(flight3, passenger);
     }
 
-    for(int i=11; i<16; i++){
+    for(i=11; i<16; i++){
         Passenger* passenger;
         createPassenger(&passenger);
         char lName[20], fName[20], nationality[20];
@@ -126,12 +141,8 @@ void airport() {
     createFlightNode(&flights, flight1);
     insertLast(&flights, flight2);
     insertLast(&flights, flight3);
-    //insertLast(&flights, flight4);
+    insertLast(&flights, flight4);
 
-    printFlightList(flights);
-
-
-    printAllPassengers(flights[0].flightValue);
 
     int choice;
     printf("\n\nPlease choose between passenger or system view (0-Passenger, 1-System):\n");
@@ -168,7 +179,11 @@ void airport() {
                         char city[20];
                         printf("\n\nChoose a city:\n");
                         scanf("%s", city);
-                        printFlightsByCityName(flights, city);
+                        bool result2 = printFlightsByCityName(flights, city);
+                        if(!result2){
+                            printf("\nNo flights found with this destination, please choose an other city\n");
+                            break;
+                        }
                         //printFlightList(flights);
                         printf("\nChoose a flight by its ID.\n");
                         int id;
