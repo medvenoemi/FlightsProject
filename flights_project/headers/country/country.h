@@ -15,19 +15,20 @@
 enum Countries{
     FRANCE=0,
     SPAIN,
-    UNITED_STATES,
+    CANADA,
     CHINA,
     ITALY,
     TURKEY,
     MEXICO,
     THAILAND,
     GERMANY,
-    UNITED_KINGDOM
+    UK
 };
 
 typedef struct {
     int capacity;
     int top;
+    int counter;
     enum Countries name;
     City** cities;
 }Country;

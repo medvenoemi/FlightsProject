@@ -14,6 +14,15 @@ void createFlightNode(FlightNode** flightNode, Flight *flightValue) {
                   flightValue->date.day, flightValue->takeOff.hour, flightValue->takeOff.minute,
                   flightValue->landing.hour, flightValue->landing.minute,
                   flightValue->destination, flightValue->price);
+    for(int i=0; i<flightValue->capacity; i++){
+        setPassengerData((*flightNode)->flightValue->table[i], flightValue->table[i]->name.lastName,
+                         flightValue->table[i]->name.firstName,flightValue->table[i]->nationality,
+                         flightValue->table[i]->gender,flightValue->table[i]->birthDate.year,
+                         flightValue->table[i]->birthDate.month,flightValue->table[i]->birthDate.day);
+        (*flightNode)->flightValue->table[i]->id = flightValue->table[i]->id;
+    }
+    (*flightNode)->flightValue->numberOfPassengers = flightValue->numberOfPassengers;
+    (*flightNode)->flightValue->flightId = flightValue->flightId;
 }
 
 void insertFirst(FlightNode** flightNode, Flight* flightValue){
@@ -50,9 +59,9 @@ Flight* removeFirst(FlightNode** flightNode){
     }
 }
 
-Flight* removeLast(FlightNode* flightNode){
+Flight* removeLast(FlightNode** flightNode){
     if(flightNode != NULL){
-        FlightNode* p = flightNode;
+        FlightNode* p = *flightNode;
         while(p->next->next != NULL){
             p = p->next;
         }
@@ -81,8 +90,8 @@ void printFlightsByCityName(FlightNode *flightNode, char *city) {
     if(flightNode != NULL){
         FlightNode* p = flightNode;
         while(p != NULL){
-            if(strcmp(flightNode->flightValue->destination->name, city) == 0){
-                printFlightDetails(flightNode->flightValue);
+            if(strcmp(p->flightValue->destination->name, city) == 0){
+                printFlightDetails(p->flightValue);
             }
             p = p->next;
         }

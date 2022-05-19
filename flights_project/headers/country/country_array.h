@@ -15,7 +15,8 @@ typedef struct{
 
 void createCountryArray(CountryArray** countryArray, int capacity);
 bool addNewCountry(CountryArray* countryArray, Country * newCountry);
-Country* findCountryByName(CountryArray* countryArray, enum Countries country);
+Country* findCountryByName(CountryArray* countryArray, char *countryName);
+Country* findCountryByType(CountryArray* countryArray, enum Countries type);
 void deleteCountryArray(CountryArray** countryArray);
 void printAllCities(CountryArray* countryArray);
 void printCountries(CountryArray* countryArray);

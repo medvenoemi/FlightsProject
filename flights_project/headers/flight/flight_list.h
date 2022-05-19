@@ -20,7 +20,7 @@ void printFlightsByCityName(FlightNode* flightNode, char* city);
 void insertFirst(FlightNode** flightNode, Flight* flightValue);
 void insertLast(FlightNode** flightNode, Flight* flightValue);
 Flight* removeFirst(FlightNode** flightNode);
-Flight* removeLast(FlightNode* flightNode);
+Flight* removeLast(FlightNode** flightNode);
 void deleteFlightList(FlightNode** flightNode);
 
 #endif //FLIGHTSPROJECT_FLIGHT_LIST_H

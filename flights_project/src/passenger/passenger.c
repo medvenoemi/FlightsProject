@@ -43,12 +43,12 @@ void printPassenger(Passenger *passenger) {
         printf("\nNULL POINTER\n");
     }
     else{
-        printf("\n%s details:\n"
+        printf("\n%s %s details:\n"
                "\t - ID: %i\n"
                "\t - GENDER: %s\n"
                "\t - NATIONALITY: %s\n"
                "\t - BIRTH DATE: %i/%i/%i\n",
-               passenger->name, passenger->id, getGender(passenger->gender), passenger->nationality, passenger->birthDate.year, passenger->birthDate.month, passenger->birthDate.day);
+               passenger->name.firstName, passenger->name.lastName, passenger->id, getGender(passenger->gender), passenger->nationality, passenger->birthDate.year, passenger->birthDate.month, passenger->birthDate.day);
     }
 }
 

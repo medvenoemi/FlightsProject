@@ -38,16 +38,22 @@ void setFlightData(Flight* flight, int year, int month, int day, int takeOffHour
     flight->price = price;
 }
 
-void insertPassenger(Flight* flight, Passenger* passenger) {
+bool insertPassenger(Flight* flight, Passenger* passenger) {
     int j, i=0;
     do{
         j = (passenger->id + i) % flight->capacity;
         if(flight->table[j]->id == -1){
+            for(int k=0; k<flight->numberOfPassengers; k++){
+                if(flight->table[i]->id == passenger->id){
+                    printf("\nPassenger with the ID %i already exists!\n", passenger->id);
+                    return false;
+                }
+            }
+            flight->numberOfPassengers++;
             setPassengerData(flight->table[j], passenger->name.lastName, passenger->name.firstName, passenger->nationality, passenger->gender, passenger->birthDate.year, passenger->birthDate.month, passenger->birthDate.day);
             flight->table[j]->seat = j;
             flight->table[j]->id = passenger->id;
-            printf("\nPassenger with the ID %i inserted\n", passenger->id);
-            return;
+            return true;
         }
         else{
             i++;
@@ -55,7 +61,7 @@ void insertPassenger(Flight* flight, Passenger* passenger) {
     }
     while(i != flight->capacity);
     printf("\nFlight is full!\n");    //ha nem sikerult a beszuras
-    return;
+    return false;
 }
 
 int searchPassengerById(Flight* flight, int id){
@@ -73,17 +79,18 @@ int searchPassengerById(Flight* flight, int id){
     return -1;    //ha nincs benne a keresett elem
 }
 
-void deletePassengerFromFlight(Flight* flight, int id){
+bool deletePassengerFromFlight(Flight* flight, int id){
     int j, i=0;
     j = (id + i) % flight->capacity;
     if(flight->table[j]->id == -1){
         printf("\nThe passenger with this ID does not exist!\n");
-        return;
+        return false;
     }
     else{
         flight->table[j]->id = -1;
         flight->numberOfPassengers--;
         printf("\nPassenger with the ID %i deleted!\n", id);
+        return true;
     }
 }
 
@@ -98,6 +105,25 @@ void printAllPassengers(Flight* flight){
             }
             else{
                 printPassenger(flight->table[i]);
+            }
+        }
+    }
+}
+
+void printSeats(Flight* flight){
+    if(flight->numberOfPassengers == 0){
+        printf("\nFlight is empty!\n");
+    }
+    else{
+        for(int i=0; i<flight->capacity; i++){
+            if(flight->table[i]->id == -1){
+                printf("Seat %i: -\n", i);
+                continue;
+            }
+            else{
+                printf("Seat %i: ", i);
+                printf("%s %s\n", flight->table[i]->name.firstName, flight->table[i]->name.lastName);
+                //printPassenger(flight->table[i]);
             }
         }
     }

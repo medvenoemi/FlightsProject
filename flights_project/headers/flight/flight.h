@@ -8,6 +8,7 @@
 #include "passenger.h"
 #include "stdlib.h"
 #include <stdio.h>
+#include <stdbool.h>
 
 typedef struct{
     int year, month, day;
@@ -34,12 +35,12 @@ typedef struct Flight{
 
 void createFlight(Flight** flight,int capacity);
 void setFlightData(Flight* flight, int year, int month, int day, int takeOffHour, int takeOffMinute,int landingHour, int landingMinute, City* city, int price);
-void insertPassenger(Flight* flight, Passenger* passenger);
+bool insertPassenger(Flight* flight, Passenger* passenger);
 void printAllPassengers(Flight* flight);
 void printFlightDetails(Flight* flight);
 void printSeats(Flight* flight);
 int searchPassengerById(Flight* flight, int id);
-void deletePassengerFromFlight(Flight* flight, int id);
+bool deletePassengerFromFlight(Flight* flight, int id);
 void deleteFlight(Flight** flight);
 void messageToPassengers(Flight* flight);
 

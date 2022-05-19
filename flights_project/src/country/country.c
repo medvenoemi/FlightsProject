@@ -13,8 +13,8 @@ char* getCountry(enum Countries name){
         case SPAIN:
             return "Spain";
             break;
-        case UNITED_STATES:
-            return "United States";
+        case CANADA:
+            return "Canada";
             break;
         case CHINA:
             return "China";
@@ -34,8 +34,8 @@ char* getCountry(enum Countries name){
         case GERMANY:
             return "Germany";
             break;
-        case UNITED_KINGDOM:
-            return "United Kingdom";
+        case UK:
+            return "UK";
             break;
         default:
             return "Undefined";
@@ -54,11 +54,16 @@ void createCountry(Country** country, int capacity, enum Countries name){
     (*country)->top = -1;
     (*country)->capacity = capacity;
     (*country)->name = name;
+    (*country)->counter = 0;
 }
 
 void push(Country* country, City* city){
+    if(country == NULL){
+        printf("error");
+    }
     if(!isFull(country)){
         country->top++;
+        country->counter++;
         strcpy(country->cities[country->top]->name, city->name);
         country->cities[country->top]->time.hour = city->time.hour;
         country->cities[country->top]->time.minute = city->time.minute;
@@ -100,12 +105,17 @@ bool isFull(Country* country){
 }
 
 void display(Country* country){
-    if(country->top == -1){
+    if(country == NULL){
+        printf("Null");
+    }
+    if(country->counter == 0){
         printf("There are no cities!");
     }
     else{
         for(int i=0; i<=country->top; i++){
-            printCity(country->cities[i]);
+            if(country->cities[i] != NULL){
+                printCity(country->cities[i]);
+            }
         }
     }
 }

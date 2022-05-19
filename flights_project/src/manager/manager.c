@@ -31,12 +31,12 @@ void airport() {
 
     City* city4;
     createCity(&city4);
-    setCityData(city4, "Chicago", 8128, 14, 45);
+    setCityData(city4, "Toronto", 8128, 14, 45);
     push(country3, city4);
 
     City* city5;
     createCity(&city5);
-    setCityData(city5, "New York", 7463 , 11, 55);
+    setCityData(city5, "Ottawa", 7463 , 11, 55);
     push(country3, city5);
 
     City* city6;
@@ -46,7 +46,7 @@ void airport() {
 
     City* city7;
     createCity(&city7);
-    setCityData(city7, "Hong Kong", 8966 , 14, 57);
+    setCityData(city7, "Shanghai", 8966 , 14, 57);
     push(country4, city7);
 
 
@@ -70,7 +70,7 @@ void airport() {
     //Set flights
     setFlightData(flight1, 2022, 2, 20, 5, 10, 7, 20, city2, 300);
     setFlightData(flight2, 2022, 8, 0, 22, 45, 7, 20, city4, 510);
-
+    setFlightData(flight3, 2022, 5, 13, 1, 20, 3, 30, city2, 150);
 
 
     //Read passengers from file and add them to flights
@@ -125,12 +125,13 @@ void airport() {
     FlightNode* flights;
     createFlightNode(&flights, flight1);
     insertLast(&flights, flight2);
-    //insertLast(&flights, flight3);
+    insertLast(&flights, flight3);
     //insertLast(&flights, flight4);
 
-    printAllCities(countries);
+    printFlightList(flights);
 
 
+    printAllPassengers(flights[0].flightValue);
 
     int choice;
     printf("\n\nPlease choose between passenger or system view (0-Passenger, 1-System):\n");
@@ -159,11 +160,16 @@ void airport() {
                         break;
                     }
                     case 4: {
-                        printf("\nChoose one of these cities please:\n");
-                        printAllCities(countries);
+                        printCountries(countries);
+                        char country[20];
+                        printf("\nEnter the name of the country, you want to travel:\n");
+                        scanf("%s", &country);
+                        display(findCountryByName(countries, country));
                         char city[20];
+                        printf("\n\nChoose a city:\n");
                         scanf("%s", city);
                         printFlightsByCityName(flights, city);
+                        //printFlightList(flights);
                         printf("\nChoose a flight by its ID.\n");
                         int id;
                         scanf("%i", &id);
@@ -183,8 +189,11 @@ void airport() {
                         createPassenger(&passenger);
                         setPassengerData(passenger, lName, fName, nationality, gender, year, month, day);
                         Flight *flight;
-                        insertPassenger(findFlightInList(flights, id), passenger);
-                        printf("\nSuccessful reservation!\n");
+                        bool result = insertPassenger(findFlightInList(flights, id), passenger);
+                        if(result){
+                            printf("\nPassenger with the ID %i inserted\n", passenger->id);
+                            printf("\nSuccessful reservation!\n");
+                        }
                         break;
                     }
                     case 5: {
@@ -196,30 +205,152 @@ void airport() {
             }
         }
         case 1:{
-            printf("Please choose between these options:\n 1. Add new city\n 2. Add new country\n 3. Modify a flight\n 4. Modify flights\n 5. Exit\n");
-            int choice2;
-            scanf("%i", &choice2);
-            switch (choice2) {
-                case 1:{
-                    printf("\nChoose a country (0-9):\n");
-                    int country;
-                    scanf("%i", &country);
-                    City* newCity;
-                    createCity(&newCity);
-                    char name[20]; int distance, hour, minute;
-                    printf("\nPlease enter the name, distance and time duration (hour, minute):\n");
-                    scanf("%s%i%i%i", name, &distance, &hour, &minute);
-                    setCityData(newCity, name, distance, hour, minute);
-                    push(findCountryByName(countries,country), newCity);
-                    break;
-                }
-                case 2:{
-                    Country* newCountry;
-                    int countryName, capacity;
-                    printf("\nPlease enter the name(0-9) and the capacity of the country:\n");
-                }
+            while(1){
+                printf("\nPlease choose between these options:\n 1. Add new city\n 2. Add new country\n 3. Show/modify a flight\n 4. Modify flights list\n 5. Exit\n");
+                int choice2;
+                scanf("%i", &choice2);
+                switch (choice2) {
+                    case 1:{
+                        printf("\nChoose a country:\n");
+                        printCountries(countries);
+                        char country[20];
+                        scanf("%s", &country);
+                        City* newCity;
+                        createCity(&newCity);
+                        char name[20]; int distance, hour, minute;
+                        printf("\n\nPlease enter the name, distance and time duration (hour, minute) of the city:\n");
+                        scanf("%s%i%i%i", name, &distance, &hour, &minute);
+                        setCityData(newCity, name, distance, hour, minute);
+                        push(findCountryByName(countries,country), newCity);
+                        break;
+                    }
+                    case 2:{
+                        Country* newCountry;
+                        int countryName, capacity;
+                        printf("\nPlease enter the name(0-9) and the capacity of the country:\n");
+                        scanf("%i%i", &countryName, &capacity);
+                        createCountry(&newCountry, capacity, countryName);
+                        bool result = addNewCountry(countries, newCountry);
+                        if(result){
+                            printf("\nCountries updated:\n");
+                            printCountries(countries);
+                        }
+                        break;
+                    }
+                    case 3:{
+                        printFlightList(flights);
+                        int id;
+                        printf("\nPlease choose a flight by giving its ID:\n");
+                        scanf("%i", &id);
+                        while(1){
+                            printf("\nPlease choose between these options:\n 1. Show seats\n 2. Print all passengers\n 3. Search passenger\n 4. Delete passenger\n 5. Exit\n");
+                            int choice3;
+                            scanf("%i", &choice3);
+                            switch (choice3) {
+                                case 1:{
+                                    printSeats(findFlightInList(flights, id));
+                                    break;
+                                }
+                                case 2:{
+                                    printf("\nPassengers:");
+                                    printAllPassengers(findFlightInList(flights, id));
+                                    break;
+                                }
+                                case 3:{
+                                    printf("\nPlease enter the ID of the passenger, you would like to find:\n");
+                                    int passengerId;
+                                    scanf("%i", &passengerId);
+                                    int position = searchPassengerById(findFlightInList(flights, id), passengerId);
+                                    if(position != -1){
+                                        printf("\nPassenger found at position %i\n", position);
+                                    }
+                                    else{
+                                        printf("\nPassenger not found!\n");
+                                    }
+                                    break;
+                                }
+                                case 4:{
+                                    printf("\nPlease enter the ID of the passenger, you want to be deleted from this flight:\n");
+                                    int passengerID;
+                                    scanf("%i", &passengerID);
+                                    bool result = deletePassengerFromFlight(findFlightInList(flights, id), passengerID);
+                                    if(result){
+                                        printf("\nPassengers (updated):");
+                                        printAllPassengers(findFlightInList(flights, id));
+                                    }
+                                    break;
+                                }
+                                case 5:{
+                                    return;
+                                }
+                                default:
+                                    printf("\nWrong choice!\n");
+                            }
+                        }
+
+                    }
+                    case 4:{
+                        while(1){
+                            printf("\nPlease choose between these options:\n1. Create a new flight\n2. Delete first flight\n3. Delete last flight\n4. Show flights\n5. Exit\n");
+                            int choice4;
+                            scanf("%i", &choice4);
+                            switch (choice4) {
+                                case 1:{
+                                    Flight *newFlight;
+                                    int capacity;
+                                    printf("\nPlease enter the capacity of the new flight:\n");
+                                    scanf("%i", &capacity);
+                                    createFlight(&newFlight, capacity);
+                                    int year, month, day, price, hour1, minute1, hour2, minute2;
+                                    char cityName[20];
+                                    printf("\nPlease enter the date (year, month, day):\n");
+                                    scanf("%i%i%i", &year, &month, &day);
+                                    printf("\nPlease enter the takeoff and landing time (hour, minute):\n");
+                                    scanf("%i%i%i%i", &hour1, &minute1, &hour2, &minute2);
+                                    printf("\nPlease enter the price:\n");
+                                    scanf("%i", &price);
+                                    City* newCity;
+                                    createCity(&newCity);
+                                    char name[20]; int distance, hour, minute;
+                                    printf("\nPlease enter the name, distance and time duration (hour, minute) of the city:\n");
+                                    scanf("%s%i%i%i", name, &distance, &hour, &minute);
+                                    setCityData(newCity, name, distance, hour, minute);
+                                    setFlightData(newFlight, year, month, day, hour1, minute1, hour2, minute2, newCity, price);
+                                    insertLast(&flights, newFlight);
+                                    printf("\nFlight successfully added\n");
+                                    break;
+                                }
+                                case 2:{
+                                    printf("\nFollowing flight deleted:\n");
+                                    printFlightDetails(removeFirst(&flights));
+                                    break;
+                                }
+                                case 3:{
+                                    printf("\nFollowing flight deleted:\n");
+                                    printFlightDetails(removeLast(&flights));
+                                    break;
+                                }
+                                case 4:{
+                                    printf("\nFlights:");
+                                    printFlightList(flights);
+                                    break;
+                                }
+                                case 5:{
+                                    return;
+                                }
+                                default:
+                                    printf("\nWrong choice!\n");
+                            }
+                        }
 
 
+                    }
+                    case 5:{
+                        return;
+                    }
+                    default:printf("\nWrong choice!\n");
+
+                }
             }
         }
 
